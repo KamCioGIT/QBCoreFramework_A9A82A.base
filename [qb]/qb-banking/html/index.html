@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SasVegas Bank</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+        <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="banking-container" v-show="isBankOpen">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        {{ playerName }}<br />
+                        Cash: <span class="positive-balance">€{{ formatCurrency(playerCash) }}</span>
+                    </div>
+                    <div class="sidebar-accounts">
+                        <ul>
+                            <li v-for="account in accounts" :key="account.name" :class="{ 'sidebar-selected': account.name === selectedAccountStatement }" @click="selectAccount(account)">{{ account.name }}: <span class="positive-balance">€{{ formatCurrency(account.balance) }}</span></li>
+                        </ul>
+                    </div>
+                    <button class="action-button" @click="closeApplication()">Uitloggen</button>
+                    <div class="sidebar-footer">Account Nummer: {{ accountNumber }}</div>
+                </div>
+                <div class="main-content">
+                    <div class="nav-bar">
+                        <div class="nav-options">
+                            <div class="nav-option" :class="{selected: activeView === 'home'}" @click="setActiveView('home')">Home</div>
+                            <div class="nav-option" :class="{selected: activeView === 'money'}" @click="setActiveView('money')">Geld</div>
+                            <div class="nav-option" :class="{selected: activeView === 'transfer'}" @click="setActiveView('transfer')">Overboeken</div>
+                            <div class="nav-option" :class="{selected: activeView === 'accountOptions'}" @click="setActiveView('accountOptions')">Account Opties</div>
+                        </div>
+                        <div class="notification-container" v-if="notification">
+                            <div :class="['notification', notification.type]">{{ notification.message }}</div>
+                        </div>
+                    </div>
+                    <div v-if="activeView === 'home'" class="transactions">
+                        <li v-for="statement in statements[selectedAccountStatement]" :key="statement.id">
+                            <span>{{ formatDate(statement.date) }}</span>
+                            <span>{{ statement.user }}</span>
+                            <span>{{ statement.reason }}</span>
+                            <span :class="balanceClass(statement.type)">{{ statement.amount }}</span>
+                        </li>
+                    </div>
+                    <div v-if="activeView === 'money'" class="money">
+                        <div class="manage-money">
+                            <div class="money-title">Geldbeheer</div>
+                            <label for="fromAccount">Account:</label>
+                            <select id="fromAccount" v-model="selectedMoneyAccount">
+                                <option v-for="account in accounts" :key="account.name" :value="account">{{ account.name }}</option>
+                            </select>
+                            <label for="amount">Hoeveelheid:</label>
+                            <input type="number" id="amount" v-model="selectedMoneyAmount" />
+                            <label for="money-reason">Reden:</label>
+                            <input type="text" id="money-reason" v-model="moneyReason" />
+                            <div class="card-buttons">
+                                <button class="action-button" @click="withdrawMoney">Opnemen</button>
+                                <button class="action-button" @click="depositMoney">Storten</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="activeView === 'transfer'" class="transfer">
+                        <div class="transfer-header">
+                            <div class="nav-option" :class="{selected: transferType === 'internal'}" @click="setTransferType('internal')">Intern</div>
+                            <span class="money-title">Overboeken</span>
+                            <div class="nav-option" :class="{selected: transferType === 'external'}" @click="setTransferType('external')">Extern</div>
+                        </div>
+                        <div v-if="transferType === 'internal'" class="transfer-options">
+                            <label for="internalFrom">Account:</label>
+                            <select id="internalFrom" v-model="internalFromAccount">
+                                <option v-for="account in accounts" :key="account.name" :value="account">{{ account.name }}</option>
+                            </select>
+                            <label for="internalTo">Account:</label>
+                            <select id="internalTo" v-model="internalToAccount">
+                                <option v-for="account in accounts" :key="account.name" :value="account">{{ account.name }}</option>
+                            </select>
+                            <label for="internalAmount">Hoeveelheid:</label>
+                            <input type="number" id="internalAmount" v-model="internalTransferAmount" />
+                            <label for="transfer-reason">Reden:</label>
+                            <input type="text" id="transfer-reason" v-model="transferReason" />
+                            <button class="action-button" @click="internalTransfer">Overboeken</button>
+                        </div>
+                        <div v-if="transferType === 'external'" class="transfer-options">
+                            <label for="externalAccountNumber">Account nummer:</label>
+                            <input type="text" id="externalAccountNumber" v-model="externalAccountNumber" />
+                            <label for="externalFrom">Account:</label>
+                            <select id="externalFrom" v-model="externalFromAccount">
+                                <option v-for="account in accounts" :key="account.name" :value="account">{{ account.name }}</option>
+                            </select>
+                            <label for="externalAmount">Hoeveelheid:</label>
+                            <input type="number" id="externalAmount" v-model="externalTransferAmount" />
+                            <label for="transfer-reason">Reden:</label>
+                            <input type="text" id="transfer-reason" v-model="transferReason" />
+                            <button class="action-button" @click="externalTransfer">Overboeken</button>
+                        </div>
+                    </div>
+                    <div v-if="activeView === 'accountOptions'" class="account-options">
+                        <div class="debit-card">
+                            <div>Betaalpas bestellen</div>
+                            <label for="pin-number">Pincode:</label>
+                            <input type="number" id="pin-number" v-model="debitPin" />
+                            <div class="card-buttons">
+                                <button class="action-button" @click="orderDebitCard">Bestel</button>
+                            </div>
+                        </div>
+                        <div class="create-account">
+                            <div>Open een gedeelde account</div>
+                            <div class="options-labels">
+                                <label for="createAccountName">Naam:</label>
+                                <label for="createAccountAmount">Hoeveelheid:</label>
+                            </div>
+                            <div class="options-inputs">
+                                <input type="text" id="createAccountName" v-model="createAccountName" />
+                                <input type="number" id="createAccountAmount" v-model="createAccountAmount" />
+                            </div>
+                            <div class="card-buttons">
+                                <button class="action-button" @click="openAccount">Open Account</button>
+                            </div>
+                        </div>
+                        <div class="edit-account">
+                            <div>Beheer gedeeld account</div>
+                            <div class="options-labels">
+                                <label for="editAccount">Account:</label>
+                                <label for="editAccountName">Naam:</label>
+                            </div>
+                            <div class="options-inputs">
+                                <select id="editAccount" v-model="editAccount">
+                                    <option v-for="account in accounts.filter(a => a.type === 'shared')" :key="account.name" :value="account">{{ account.name }}</option>
+                                </select>
+                                <input type="text" id="editAccountName" v-model="editAccountName" />
+                            </div>
+                            <div class="card-buttons">
+                                <button class="action-button" @click="deleteAccount">Verwijder</button>
+                                <button class="action-button" @click="renameAccount">Hernoemen</button>
+                            </div>
+                        </div>
+                        <div class="manage-account">
+                            <div>Beheer accountgebruikers</div>
+                            <div class="options-labels">
+                                <label for="manageAccountName">Account:</label>
+                                <label for="manageUserName">Burger-ID:</label>
+                            </div>
+                            <div class="options-inputs">
+                                <select id="manageAccountName" v-model="manageAccountName">
+                                    <option v-for="account in accounts.filter(a => a.type === 'shared')" :key="account.name" :value="account">{{ account.name }}</option>
+                                </select>
+                                <div class="combo-input">
+                                    <input type="text" id="manageUserName" v-model="manageUserName" @input="filterUsers" @focus="showUsersDropdown = true" @blur="hideDropdown" />
+                                    <div class="dropdown-container" v-if="showUsersDropdown">
+                                        <div class="list-container">
+                                            <ul>
+                                                <li v-for="user in filteredUsers" @click="selectUser(user)">{{ user }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-buttons">
+                                <button class="action-button" @click="addUserToAccount">Toevoegen</button>
+                                <button class="action-button" @click="removeUserFromAccount">Verwijderen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banking-container" v-show="isATMOpen">
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        {{ playerName }}<br />
+                        Cash: <span class="positive-balance">€{{ formatCurrency(playerCash) }}</span>
+                    </div>
+                    <div class="sidebar-accounts">
+                        <ul>
+                            <li v-for="account in accounts" :key="account.name">{{ account.name }}: <span class="positive-balance">€{{ formatCurrency(account.balance) }}</span></li>
+                        </ul>
+                    </div>
+                    <button class="action-button" @click="closeApplication()">Uitloggen</button>
+                    <div class="sidebar-footer">Account Nummer: {{ accountNumber }}</div>
+                </div>
+                <div class="main-content">
+                    <div class="money">
+                        <div class="manage-money">
+                            <div class="money-title">Opname</div>
+                            <label for="fromAccount">Account:</label>
+                            <select id="fromAccount" v-model="selectedMoneyAccount">
+                                <option v-for="account in accounts" :key="account.name" :value="account">{{ account.name }}</option>
+                            </select>
+                            <label for="amount">Hoeveelheid:</label>
+                            <input type="number" id="amount" v-model="selectedMoneyAmount" />
+                            <label for="money-reason">Reden:</label>
+                            <input type="text" id="money-reason" v-model="moneyReason" />
+                            <div class="card-buttons">
+                                <button class="action-button" @click="withdrawMoney">Opnemen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-if="showPinPrompt" class="pin-prompt">
+                <div class="pin-input">
+                    <input type="password" v-model="enteredPin" placeholder="Enter PIN" readonly />
+                </div>
+                <div class="number-pad">
+                    <button v-for="number in 9" :key="number" @click="appendNumber(number)">{{ number }}</button>
+                    <button @click="appendNumber(0)">0</button>
+                </div>
+                <div class="card-buttons">
+                    <button class="action-button" @click="enteredPin = ''">Delete</button>
+                    <button class="action-button" @click="pinPrompt(enteredPin)">Indienen</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>

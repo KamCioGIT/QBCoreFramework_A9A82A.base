@@ -2,6 +2,10 @@
 fx_version 'cerulean'
 game 'gta5'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 author 'PLOKMJNB#8692'
 description 'A single resource car pack to eliminate the rest'
 repository 'https://github.com/PLOKMJNB/FiveM-Civ-Car-Pack'

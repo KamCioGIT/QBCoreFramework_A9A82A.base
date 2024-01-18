@@ -1,0 +1,25 @@
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>bkr_id1_33.ymap</Item>
+    <Item>bkr_id1_33_critical_0.ymap</Item>
+    <Item>bkr_id1_33_interior_v_firedept_milo_.ymap</Item>
+    <Item>bkr_id1_33_strm_0.ymap</Item>
+    <Item>bkr_id1_occl_03.ymap</Item>
+    <Item>npx_firedp_exteriour_details.ymap</Item>
+    <Item>nxp_exterior_placement.ymap</Item>
+    <Item>nxp_firedp_milo.ymap</Item>
+    <Item>bkr_id1_rd_critical_1.ymap</Item>
+    <Item>bkr_id1_rd_strm_5.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>nxp_firedp.ytyp</Item>
+  </YtypFilenames>
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+</CodeWalkerProject>

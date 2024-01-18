@@ -1,2 +1,0 @@
-# SASVEGAS
-roleplay server

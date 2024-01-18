@@ -1,0 +1,49 @@
+.preview-screen .ui-elements .notify-container .notify_classic {
+    width: 20vw;
+    padding: 0.8vw; 
+    border-radius: 0.187216vw;
+    overflow: hidden;
+    max-width: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    color: var(--theme);
+    background-color: var(--theme-opposite);
+    position: relative;
+    left: 0%;
+    pointer-events: none;
+} 
+
+.preview-screen .ui-elements .notify-container .notify_classic .icon {
+    padding: 1vw;
+    font-size: 1.1vw;
+    width: 1vw;
+    height: 1vw;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--motive);
+    border-radius: 50%;
+    transform: scale(0.8);
+}
+
+.preview-screen .ui-elements .notify-container .notify_classic > .header-box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2vw;
+    width: 80%;
+}
+
+.preview-screen .ui-elements .notify-container .notify_classic > .header-box-content .header {
+    font-size: 0.75vw;
+    width: 100%;
+}
+
+.preview-screen .ui-elements .notify-container .notify_classic > .header-box-content .text {
+    width: 100%;
+    font-size: 0.55vw;
+    white-space: normal;
+    opacity: 0.4;
+}

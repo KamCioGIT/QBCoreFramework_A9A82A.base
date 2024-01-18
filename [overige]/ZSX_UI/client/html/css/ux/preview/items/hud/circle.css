@@ -1,0 +1,46 @@
+.preview-screen .ui-elements .hud-container > .hud_circle {
+    width: 2.3vw;
+    height: 2.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
+    pointer-events: none;
+    margin-left: 0.3vw;
+}
+
+.preview-screen .ui-elements .hud-container > .hud_circle > svg {
+    width: 2.3vw;
+    height: 2.3vw;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.preview-screen .ui-elements .hud-container > .hud_circle svg circle {
+    width: 2.3vw;
+    height: 2.3vw;
+    fill: var(--theme-opposite-2);
+    stroke-width: 0.16vw;
+    stroke: var(--motive);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke-dasharray: 434;
+    stroke-dashoffset: -434;
+    transition: stroke-dashoffset 3.325s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.preview-screen .ui-elements .hud-container > .hud_circle .icon {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 0.8vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    color: var(--motive);
+}

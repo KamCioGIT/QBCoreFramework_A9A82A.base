@@ -1,0 +1,14 @@
+COMMANDS:
+
+/bp -> to access the battle pass panel or use key
+/addcoins ID COINS -> add coins to a user by ID // only with CoreCredits config false
+/checkcoins ID -> check a user coins by ID // only with CoreCredits config false
+/delcoins ID COINS -> remove coins from a user by ID // only with CoreCredits config false
+/addxp ID XP -> add experience points to user
+/delxp ID XP -> delete experience poinst to user
+/delVIP ID -> delete VIP to user
+
+
+To add points via to jobs or other scripts, add the following Trigger in the job's client.lua:
+
+TriggerServerEvent("battlepass:addXP",GetPlayerServerId(PlayerId()),100) -- 100 is the amount of points

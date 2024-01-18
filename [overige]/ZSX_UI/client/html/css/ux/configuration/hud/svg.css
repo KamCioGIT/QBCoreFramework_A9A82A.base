@@ -1,0 +1,37 @@
+.configuration-screen section .box .content > .hud_svg{
+    width: 8vw;
+    height: 8vw;
+    background-color: var(--theme-opposite);
+    margin-right: 30%;
+    border-radius: 0.4442353055939844vw;
+    box-sizing: border-box;
+    padding: 0.3885105175410588vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    left: 0%;
+    overflow: hidden;
+}
+.configuration-screen section .box .content > .hud_svg .progress {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-opposite-light);
+    animation: 0;
+    border-radius: 0.3173109325671317vw;
+}
+
+.configuration-screen section .box .content > .hud_svg .progress .icon {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: var(--theme-opposite-light);
+    transform: skew(0deg) rotate(0deg) scale(0.5)
+}

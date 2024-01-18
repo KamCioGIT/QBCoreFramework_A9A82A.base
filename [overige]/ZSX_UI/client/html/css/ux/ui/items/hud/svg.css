@@ -1,0 +1,37 @@
+.ui-screen .hud-cont > .hud_svg{
+    width: 2.3vw;
+    height: 2.3vw;
+    background-color: var(--theme-opposite);
+    border-radius: 0.3vw;
+    box-sizing: border-box;
+    padding: 0.16vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+.ui-screen .hud-cont > .hud_svg .progress {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: var(--theme-opposite);
+    animation: 0;
+    border-radius: 0.2vw;
+}
+
+.ui-screen .hud-cont > .hud_svg .progress .icon {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: var(--theme-opposite-light);
+    transform: skew(0deg) rotate(0deg) scale(0.5)
+}

@@ -1,0 +1,90 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet"> 
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	</head>
+	<body id="body">
+		<div id="container" class="container">
+
+            <!-- VIP ACCOUNT -->
+            <div id="prime" class="prime">              
+            </div>
+
+            <!-- NEXT EVENT -->
+            <div id="events" class="events">
+                <span class="events-title">NEXT EVENT</span>
+                <span id="events-data" class="events-data"></span>
+                <img class="events-img" src="./img/event.png">
+            </div>
+
+            <!-- EVENT ITEM -->
+            <div id="eventitem" class="eventitem">
+                <div id="eventitem-close" class="eventitem-close"><img class="eventitem-close-img" src="./img/close.png"> </div>
+                <span id="eventitem-title" class="eventitem-title"></span>
+                <span id="eventitem-text" class="eventitem-text"></span>
+                <img id="eventitem-img" class="eventitem-img" src="">
+            </div>
+
+            <!-- USER -->
+            <div id="user" class="user">
+                <img class="user-img" src="./img/passport.png">
+                <div id="user-iban"></div>
+                <span id="username" class="username"></span>
+                <span class="cash-text"><img class="cash-icon" src="./img/cash.png"></span><span id="cash-data" class="cash-data"></span>
+                <span class="bank-text"><img class="cash-icon" src="./img/bank.png"> </span><span id="bank-data" class="bank-data"></span>
+                <div id="user-phone"></div>
+                
+            </div>
+
+            <!-- REPORT -->
+            <div id="report" class="report">
+                <img class="report-img" src="./img/alert.png">
+                <span class="report-text">SEND REPORT</span>
+            </div>
+
+            <!-- MAP -->
+            <div id="map" class="map">
+                <img class="map-img" src="./img/map.jpg">
+                <span class="map-text">MAP</span>
+            </div>
+
+            <!-- SHOP -->
+            <div id="shop" onclick="openWeb()" class="shop">
+                <img class="shop-img" src="./img/car.png">
+                <span class="shop-text">SHOP</span>
+            </div>
+
+            <!-- MY WORK -->
+            <div class="work">
+                <img class="work-img" src="./img/contract.png">
+                <span class="work-text">MY WORK</span>
+                <span id="work-data1" class="work-data1"></span>
+                <span id="work-data2" class="work-data2"></span>
+            </div>
+
+            <!-- INVENTORY -->
+            <div id="inventory" class="inventory">
+                <img class="inventory-img" src="./img/backpack.png">
+                <span class="inventory-text">INVENTORY</span>
+            </div>
+
+            <!-- EARN MONEY -->
+            <div class="money" onclick="openDis()">
+                <img class="money-img" src="./img/money.png">
+                <span class="money-text">EARN MONEY</span>
+                <span class="money-text2">AND GET COOL BONUSES</span>
+            </div>
+
+            <!-- CONFIGURATION -->
+            <div id="configuration" class="config">
+                <img class="config-img" src="./img/tools.png">
+                <span class="config-text">CONFIGURATION</span>
+            </div>
+
+        </div>
+        <script src="./script.js" type="text/javascript"></script>
+	</body>
+</html>

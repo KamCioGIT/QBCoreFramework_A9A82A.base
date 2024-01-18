@@ -1,0 +1,66 @@
+.configuration-screen section .box .content .displayer-content_basic {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    left: 0%;
+    gap: 0.15vw;
+}
+
+.configuration-screen section .box .content .displayer-content_basic .row {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 0.15vw;
+}
+
+.configuration-screen section .box .content .displayer-content_basic .displayer-b {
+    display: flex;
+    width: 8vw;
+    font-size: 0.75vw;
+    border-radius: 0.2vw;
+    overflow: hidden;
+    background-color: var(--theme-opposite);
+}
+
+.configuration-screen section .box .content .displayer-content_basic .displayer-b .icon {
+    width: 4vw;
+    text-align: center;
+    padding: 0.2vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--theme-opposite);
+    background-color: var(--motive);
+}
+
+.configuration-screen section .box .content .displayer-content_basic .displayer-b .text {
+    width: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--theme);
+    opacity: 0.5;
+}
+
+.configuration-screen section .box .content .displayer-content_basic .displayer {
+    width: 8vw;
+    height: 6vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2vw;
+    gap:1vw;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--theme-opposite);
+    color: var(--motive);
+}
+
+.configuration-screen section .box .content .displayer-content_basic .displayer .icon {
+    font-size: 2vw;
+}
+
+.configuration-screen section .box .content .displayer-content_basic .displayer .text {
+    font-weight: 600;
+    font-size: 0.65vw;
+}

@@ -1,0 +1,39 @@
+.configuration-screen section .box .content .notify_basic {
+    width: 20vw;
+    padding: 0.7vw; 
+    border-radius: 0.187216vw;
+    overflow: hidden;
+    max-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: var(--theme);
+    gap: 0.5vw;
+    background-color: var(--theme-opposite);
+    position: relative;
+    left: 0%;
+} 
+
+.configuration-screen section .box .content .notify_basic .header-box-content {
+    display: flex;
+    width: 100%;
+    font-size: 1.02574vw;
+    font-weight: 600;
+}
+
+.configuration-screen section .box .content .notify_basic .header-box-content .icon {
+    width: 1.22vw;
+    font-size: 0.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--motive);
+}
+
+.configuration-screen section .box .content .notify_basic .text {
+    font-size: 0.6vw;
+    opacity: 0.6;
+    max-width: 30vw;
+    overflow: hidden;
+    white-space: normal;
+}

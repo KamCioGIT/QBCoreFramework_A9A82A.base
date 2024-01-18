@@ -1,0 +1,90 @@
+.welcome-screen{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:5;
+    left:-100%;
+    top:0;
+    display:flex;
+    overflow:hidden
+}
+.welcome-screen section{
+    width:100%;
+    height:100%;
+    flex:0 0 100%;
+    background:var(--theme);
+    color:var(--theme-color);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center
+}
+.welcome-screen section .flex{
+    display:flex;
+    justify-content:center
+}
+.welcome-screen section .header{
+    font-size:2vw;
+    padding:0 0 .2vw;
+    font-weight:700;
+    font-style:italic;
+    text-transform:uppercase;
+    opacity:0;
+    position:relative;
+    left: 100%;
+}
+.welcome-screen section .line{
+    width:1vw;
+    background-color:var(--theme);
+    height:100%;
+    transform:skew(-10deg)
+}
+.welcome-screen section .user{
+    width:0;
+    overflow:hidden;
+    font-size:.7vw;
+    letter-spacing:.2vw;
+    opacity:.8;
+    text-transform:uppercase;
+    margin-top:auto;
+    margin-bottom:.6vw
+}
+.welcome-screen section .info{
+    position:absolute;
+    bottom:40%;
+    font-size:.6vw;
+    background-color: transparent;
+    text-align:center;
+    opacity:0;
+    cursor:default;
+    padding:.5vw 2vw;
+    animation: pulsateAnim 5s infinite;
+}
+@keyframes pulsateAnim {
+    0% {
+        background: transparent;
+    } 50% {
+        background-color: rgba(0, 0, 0, 0.08);
+    } 100% {
+        background-color: transparent;
+    }
+}
+
+.welcome-screen section .light-theme{
+    background-color:var(--theme);
+    color:var(--theme-opposite);
+    transition:.125s ease-in-out
+}
+.welcome-screen section .light-theme:hover{
+    background-color:var(--theme-opposite);
+    color:var(--theme);
+    animation: none;
+}
+.welcome-screen section .dark-theme{
+    background-color:transparent;
+    color:#fff
+}
+.welcome-screen section .dark-theme:hover{
+    background-color:#fff;
+    color:#000
+}

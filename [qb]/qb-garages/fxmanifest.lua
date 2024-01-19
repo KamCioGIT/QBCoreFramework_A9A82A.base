@@ -4,6 +4,10 @@ lua54 'yes'
 description 'QB-Garages'
 version '2.0.0'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 shared_scripts {
     'config.lua',
     '@qb-core/shared/locale.lua',

@@ -4,6 +4,10 @@ game 'gta5'
 description 'QB-HotdogJob'
 version '1.2.2'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 ui_page 'html/ui.html'
 
 shared_scripts {

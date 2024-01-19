@@ -5,6 +5,10 @@ game "gta5"
 author "Project Sloth & OK1ez"
 version '2.1.5'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 lua54 'yes'
 
 ui_page 'html/index.html'

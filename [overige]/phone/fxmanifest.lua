@@ -6,6 +6,10 @@ version "2.0.2"
 author "Chezza Studios"
 description "Phone for FiveM"
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 escrow_ignore {
   'apps/**/*',
   'config/*',

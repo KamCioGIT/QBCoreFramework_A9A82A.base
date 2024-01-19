@@ -4,6 +4,10 @@ description 'QB-VehicleKeys'
 version '1.3.0'
 ui_page 'NUI/index.html'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 files {
     'NUI/index.html',
     'NUI/style.css',

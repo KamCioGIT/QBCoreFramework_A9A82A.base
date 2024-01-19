@@ -5,6 +5,10 @@ description 'FiveM motel script made by Oph3Z & Yusuf'
 discord 'https://discord.gg/Pnq5R4HszK'
 author 'oph3z & yusufkaracolak'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 client_scripts {
     'client/*.lua',
 }

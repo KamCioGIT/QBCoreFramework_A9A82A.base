@@ -4,6 +4,10 @@ lua54 'yes'
 description 'QB-Inventory'
 version '1.2.4'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 shared_scripts {
     '@qb-core/shared/locale.lua',
     'locales/en.lua',

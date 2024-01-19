@@ -4,6 +4,10 @@ author "Pickle Mods#0001"
 version "v1.2.5"
 ui_page "html/blank.html"
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 files { 
 	"html/blank.html",
 	"html/index.html",

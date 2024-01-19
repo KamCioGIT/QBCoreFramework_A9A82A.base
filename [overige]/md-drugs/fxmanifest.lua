@@ -4,6 +4,10 @@ description "drugs by mustache dom"
 fx_version "cerulean"
 game "gta5"
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 client_scripts {
 	'client/**.lua',
 	'@PolyZone/client.lua',

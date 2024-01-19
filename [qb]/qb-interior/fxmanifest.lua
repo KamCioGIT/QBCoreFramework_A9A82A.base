@@ -4,6 +4,10 @@ lua54 'yes'
 description 'QB-Interior'
 version '1.2.0'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 this_is_a_map 'yes'
 
 client_scripts {

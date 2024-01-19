@@ -1,6 +1,10 @@
 fx_version 'cerulean'
 game 'gta5'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 author 'ButyCall#8291 and bitc0de#2762'
 
 lua54 'yes'

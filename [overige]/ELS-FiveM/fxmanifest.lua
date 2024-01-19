@@ -7,6 +7,10 @@ lua54 'yes'
 author 'MrDaGree'
 description 'A resource which provides extensive controls for Emergency Lighting System-V created by Lt.Caine'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 shared_script 'shared/*.lua'
 
 client_script {

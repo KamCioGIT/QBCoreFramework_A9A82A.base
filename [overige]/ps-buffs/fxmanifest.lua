@@ -6,6 +6,10 @@ description "Buff tracker for qbcore"
 author "Idris"
 version "0.0.1"
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 lua54 'yes'
 use_fxv2_oal 'yes'
 

@@ -5,6 +5,10 @@ author 'BerkieB'
 description 'An optimized interaction system for FiveM, based on qtarget'
 version '5.5.0'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 ui_page 'html/index.html'
 
 client_scripts {

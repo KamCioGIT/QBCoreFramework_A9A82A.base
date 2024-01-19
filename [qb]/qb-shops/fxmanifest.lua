@@ -4,6 +4,10 @@ game 'gta5'
 description 'QB-Shops'
 version '1.2.1'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 shared_scripts {
     '@PolyZone/client.lua',
     '@PolyZone/BoxZone.lua',

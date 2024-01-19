@@ -13,6 +13,10 @@ license      'LGPL-3.0-or-later'
 repository   'https://github.com/overextended/ox_lib'
 description  'A library of shared functions to utilise in other resources.'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 --[[ Manifest ]]--
 dependencies {
 	'/server:7290',

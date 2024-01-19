@@ -4,6 +4,10 @@ lua54 'yes'
 description 'qb-mechanicjob'
 version '3.0.0'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 shared_scripts {
     '@qb-core/shared/locale.lua',
     'locales/en.lua',

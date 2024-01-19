@@ -4,6 +4,10 @@ game 'gta5'
 description 'qb-vehicleshop'
 version '2.1.0'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 shared_script {
     'config.lua',
     '@qb-core/shared/locale.lua',

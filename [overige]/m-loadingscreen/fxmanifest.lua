@@ -2,6 +2,10 @@ fx_version 'adamant'
 game 'gta5'
 author "Lucid#3604"
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 client_scripts {
     'client/main.lua',
 }

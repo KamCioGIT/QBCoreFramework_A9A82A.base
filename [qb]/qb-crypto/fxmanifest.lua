@@ -4,6 +4,10 @@ game 'gta5'
 description 'QB-Crypto'
 version '1.2.1'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 shared_scripts {
     '@qb-core/shared/locale.lua',
     'locales/en.lua',

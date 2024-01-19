@@ -8,6 +8,10 @@ maintainers "Zyo#1032, Black Dahlia#3044, Joey#3804"
 version '2.0'
 description "Advanced & Realistic FireFighter System Mainetained by Zyo#1032"
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 files {
     "html/index.html",
     'hose/contentunlocks.meta',

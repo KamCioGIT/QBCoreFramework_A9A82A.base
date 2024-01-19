@@ -3,6 +3,10 @@ game 'gta5'
 version '1.31'
 lua54 'yes'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 author '.zeusx#2743 - [ZSX Development]'
 description 'FiveM User Interface'
 

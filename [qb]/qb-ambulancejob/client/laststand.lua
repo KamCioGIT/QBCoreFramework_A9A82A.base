@@ -44,6 +44,7 @@ function SetLaststand(bool)
         local pos = GetEntityCoords(ped)
         local heading = GetEntityHeading(ped)
         TriggerServerEvent('InteractSound_SV:PlayOnSource', 'demo', 0.1)
+        TriggerEvent('brutal_policejob:client:PlayerDied')
         LaststandTime = Config.ReviveInterval
         if IsPedInAnyVehicle(ped) then
             local veh = GetVehiclePedIsIn(ped)

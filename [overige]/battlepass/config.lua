@@ -48,7 +48,7 @@ Config.XPbytime = true
 -- 1 point by second
 Config.XPbytimeMultiplier = 1 
 -- url of discord for webhook
-Config.DiscordWebhookLink = "" 
+Config.DiscordWebhookLink = "https://discord.com/api/webhooks/1032391695263879218/rmegILz7jBDME5IDOJqr9MAJE9slN7VXQZjJWSxdRjEPm2gA-8bGlpGXEyQIl-6i6pt2" 
 --if you use Core_Credits script to manage credits
 Config.CoreCredits = false 
 -- by default the superadmin and admin groups have permissions for commands. If you want you can add one more group

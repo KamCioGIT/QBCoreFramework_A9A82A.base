@@ -1,7 +1,11 @@
 fx_version 'cerulean'
 game 'gta5'
 
-this_is_a_map "yes"
+this_is_a_map 'yes'
+
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
 
 data_file 'INTERIOR_PROXY_ORDER_FILE' 'interiorproxies.meta'
 data_file 'TIMECYCLEMOD_FILE' 'timecycles/ocean_h_timecycle.xml'

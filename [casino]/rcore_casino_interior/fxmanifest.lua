@@ -4,6 +4,10 @@ lua54        'yes'
 game         'gta5'
 this_is_a_map 'yes'
 
+pmc_updates 'yes'
+pmc_github 'github.com/SASVegas/SASVEGAS'
+pmc_version '1.0'
+
 --[[ Resource Information ]]--
 name         'rcore_casino_interior_heist'
 author       'NewEdit#8679, Robin឵#0001 <rcore.cz> |  brofx#2394'

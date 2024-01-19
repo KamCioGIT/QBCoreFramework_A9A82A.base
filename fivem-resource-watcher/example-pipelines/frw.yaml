@@ -14,10 +14,10 @@ jobs:
       - name: "Pull remote changes"
         uses: appleboy/ssh-action@v0.1.7
         env:
-          REPO_PATH: "/home/fivem/txData/QBCoreFramework_A9A82A.base/resources"
+          REPO_PATH: "C:/ServerResources"
         with:
           host: ${{ secrets.SSH_HOST }}
-          username: root
+          username: Administrator
           #key: ${{ secrets.SSH_KEY }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: 22
@@ -32,3 +32,5 @@ jobs:
           serverPort: 30120
           rconPassword: ${{ secrets.RCON_PASSWORD }}
           restartIndividualResources: true
+          resourcesToIgnore: ""
+          restartServerWhen0Players: false

@@ -401,6 +401,12 @@ QBShared.Items = {
 
     --DRUGS
 
+    --Politie
+    handcuff_key 			 	 = { name = 'handcuff_key', 				    label = 'Handcuff Key', 				    weight = 1, 		type = 'item', 		image = 'handcuff_key.png', 			unique = false, 	useable = true, 	shouldClose = true,	   combinable = nil,   description = ''},
+    police_bulletproof		 	 = { name = 'police_bulletproof', 				label = 'Police Bulletproof', 				weight = 1, 		type = 'item', 		image = 'police_bulletproof.png', 		unique = false, 	useable = true, 	shouldClose = true,	   combinable = nil,   description = ''},
+    sheriff_bulletproof			 = { name = 'sheriff_bulletproof', 				label = 'Sheriff Bulletproof', 				weight = 1, 		type = 'item', 		image = 'sheriff_bulletproof.png', 		unique = false, 	useable = true, 	shouldClose = true,	   combinable = nil,   description = ''},
+    cam_hacking				     = { name = 'cam_hacking', 						label = 'Camera Hack', 						weight = 1, 		type = 'item', 		image = 'cam_hacking.png', 				unique = false, 	useable = true, 	shouldClose = true,	   combinable = nil,   description = ''},
+
 ------------------ md-drugs
     coke 		 	 	 	     = {name = 'coke',           				label = 'Raw Cocaine', 				weight = 1000,		type = 'item', 		image = 'coke.png', 				unique = false, 	useable = false, 	shouldClose = false,   combinable = nil,    description = 'Processed cocaine'},
     coca_leaf 		 	 	 	 = {name = 'coca_leaf',           			label = 'Cocaine leaves',	 		weight = 1500,		type = 'item', 		image = 'coca_leaf.png', 			unique = false, 	useable = false, 	shouldClose = false,   combinable = nil,    description = 'Cocaine leaves that must be processed !'},

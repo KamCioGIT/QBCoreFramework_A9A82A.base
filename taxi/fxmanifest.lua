@@ -4,8 +4,8 @@ game 'gta5'
 author: 'LiveWithMike'
 
 pmc_updates 'yes'
-pmc_github 'github.com/SASVegas/SASVEGAS'
-pmc_version '1.0'
+pmc_github 'https://github.com/SASVegas/SASVEGAS'
+pmc_version '1.01'
 
 files {
 

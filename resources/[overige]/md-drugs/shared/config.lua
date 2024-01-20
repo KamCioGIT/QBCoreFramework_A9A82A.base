@@ -9,9 +9,9 @@ Config.rewardWeed = "wetcannabis"
 Config.oxtarget = true --- turn to true if you use oxtarget
 Config.respawnTime = 150 -- Seconds
 Config.Fuel = "LegacyFuel" -- type the name of script you use i.e. ps-fuel, cdn-fuel, LegacyFuel
-Config.OxInv = true -- true if you use ox inventory, false if you use qb/lj/ps
+Config.OxInv = false -- true if you use ox inventory, false if you use qb/lj/ps
 Config.TierSystem = true -- allows for three tiers of certain drugs ( coke, heroin, crack
-Config.StupidassNewQbItemName = false -- true if you have updated your items.lua from base qb after november 2023 because changing item names this far in a framework is 3 IQ points total
+Config.StupidassNewQbItemName = true -- true if you have updated your items.lua from base qb after november 2023 because changing item names this far in a framework is 3 IQ points total
 Config.imagelink = "ox_inventory/web/images/"
 
 

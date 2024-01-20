@@ -1,18 +1,18 @@
 Config = {}
 
-Config.ServerName = 'ZSX-Development.eu'        -- [STRING] [DEF. 'YOUR-SERVER-.EU] YOUR SERVER NAME 
+Config.ServerName = 'SasVegasRP'        -- [STRING] [DEF. 'YOUR-SERVER-.EU] YOUR SERVER NAME 
 Config.RefreshInterval = 1000                   -- [INT] [DEF. 1000] INTERVAL FOR MAIN LOOP THAT UPDATES UI VALUES
 Config.Displayers_RefreshInterval = 5000       -- [INT] [DEF. 5000] INTERVAL FOR MAIN LOOP THAT UPDATES DISPLAYERS VALUES
-Config.MenuKeybind = 'F9'                       -- [STRING] [DEF. 'F9'] Menu keybind
-Config.SeatbeltKeybind = 'B'                    -- [STRING] [DEF. 'B'] Key to toggle seatbelts
+Config.MenuKeybind = 'F12'                       -- [STRING] [DEF. 'F9'] Menu keybind
+Config.SeatbeltKeybind = 'G'                    -- [STRING] [DEF. 'B'] Key to toggle seatbelts
 Config.SeatbeltKeybind_Name = 'Toggle seatbelt' -- [STRING] [DEF. 'Toggle seatbelt'] Name of the label placed in Settings > Keybinds > FiveM
 Config.AutoStartUI = true                       -- [BOOLEAN] [DEF. true] Automatically start UI on startup. Look inside docs for more information.
 
-Config.ConfigurationMenu = true                 -- [BOOLEAN] [DEF. TRUE] Screen that's fully white including welcome, preview and configuration
+Config.ConfigurationMenu = false                 -- [BOOLEAN] [DEF. TRUE] Screen that's fully white including welcome, preview and configuration
 Config.UseStress = false                        -- [BOOLEAN] [DEF. TRUE] Stands for stress bar inside hud screen
 Config.TestSettings = true                      -- [BOOLEAN] [DEF. TRUE] Stands for test commands such as /progress and /notify to verify proper position of components
 Config.Units = 'kmh'                            -- [STRING] [DEF. 'KMH'] Units for vehicle interface ['kmh', 'mph'] Also change them inside: client/html/js/variables.js Line 193 to apply changes in interface
-Config.HideRadar = false                        -- [BOOLEAN] [DEF. FALSE] Hide radar (minimap on the left bottom) while not in sitting in vehicle
+Config.HideRadar = true                        -- [BOOLEAN] [DEF. FALSE] Hide radar (minimap on the left bottom) while not in sitting in vehicle
 Config.Standalone = false                       -- [BOOLEAN] [DEF. FALSE] If you do not use any framework set this to true to be able to use Interface
 Config.UseBaseEvents = true                     -- [BOOLEAN] [DEF. TRUE] If you want to receive more optimized Displayers set that to true and set the values for Config.BaseEvents object
 --[[

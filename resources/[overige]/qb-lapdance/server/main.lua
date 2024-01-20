@@ -1,6 +1,6 @@
 ESX = nil
 
-local CurrentVersion = '1.1' -- Do Not Change This Value
+local CurrentVersion = '1.2' -- Do Not Change This Value
 local NewestVersion = nil 
 local ChangeLogText = nil 
 

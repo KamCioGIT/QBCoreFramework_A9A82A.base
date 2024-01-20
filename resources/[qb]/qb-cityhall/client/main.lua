@@ -341,3 +341,71 @@ CreateThread(function()
         end
     end
 end)
+
+local idTypes = {
+    ["id_card"] = {
+        label = "ID Card",
+        item = "id_card"
+    },
+    ["a_driver_license"] = {
+        label = "Class A Drivers License",
+        item = "driver_license",
+		type = 'A'
+    },
+	["b_driver_license"] = {
+        label = "Class B Drivers License",
+        item = "driver_license",
+		type = 'B'
+    },
+	["c_driver_license"] = {
+        label = "Class C Drivers License",
+        item = "driver_license",
+		type = 'C'
+    },
+	["d_driver_license"] = {
+        label = "Class D Drivers License",
+        item = "driver_license",
+		type = 'D'
+    },
+    ["weaponlicense"] = {
+        label = "Firearms License",
+        item = "weaponlicense",
+		type = 'A'
+    }
+}
+
+RegisterNUICallback('requestLicenses', function(data, cb)
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    local licensesMeta = PlayerData.metadata["licences"]
+    local availableLicenses = {}
+
+    for type,_ in pairs(licensesMeta) do
+        if licensesMeta[type] and type ~= "N" and type ~= "driver" then
+            local licenseType = nil
+            local label = nil
+
+            if type == "A" then
+                licenseType = "a_driver_license"
+                label = "Class A Drivers Licence"
+			elseif type == "B" then
+                licenseType = "b_driver_license"
+                label = "Class B Drivers Licence"
+			elseif type == "C" then
+                licenseType = "c_driver_license"
+                label = "Class C Drivers Licence"
+			elseif type == "D" then
+                licenseType = "d_driver_license"
+                label = "Class D Drivers Licence"
+            elseif type == "weapon" then
+                licenseType = "weaponlicense"
+                label = "Firearms License"
+            end
+
+            availableLicenses[#availableLicenses+1] = {
+                idType = licenseType,
+                label = label
+            }
+        end
+    end
+    cb(availableLicenses)
+end)

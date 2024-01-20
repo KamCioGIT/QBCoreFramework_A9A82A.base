@@ -74,16 +74,36 @@ $(".cityhall-option-block").click(function (e) {
     }
 });
 
-$(document).on("click", ".identity-page-block", function (e) {
+$(document).on("click", ".identity-page-block", function(e){
     e.preventDefault();
-    selectedIdentityType = $(this).data("type");
-    selectedIdentityCost = $(this).data("cost");
+
+    var idType = $(this).data('type');
+
+    selectedIdentityType = idType;
+
     if (selectedIdentity == null) {
         $(this).addClass("identity-selected");
         $(".hover-description").fadeIn(10);
         selectedIdentity = this;
-        $(".request-identity-button").fadeIn(100);
-        $(".request-identity-button").html(`<p>Buy $${selectedIdentityCost}</p>`);
+        if (idType == "id_card") {
+            $(".request-identity-button").fadeIn(100);
+            $(".request-identity-button").html("<p>Buy $50</p>")
+        } else if (idType == "a_driver_license") {
+            $(".request-identity-button").fadeIn(100);
+            $(".request-identity-button").html("<p>Buy $50</p>")
+		} else if (idType == "b_driver_license") {
+            $(".request-identity-button").fadeIn(100);
+            $(".request-identity-button").html("<p>Buy $50</p>")
+		} else if (idType == "c_driver_license") {
+            $(".request-identity-button").fadeIn(100);
+            $(".request-identity-button").html("<p>Buy $50</p>")
+		} else if (idType == "d_driver_license") {
+            $(".request-identity-button").fadeIn(100);
+            $(".request-identity-button").html("<p>Buy $50</p>")
+        } else if (idType == "weaponlicense") {
+            $(".request-identity-button").fadeIn(100);
+            $(".request-identity-button").html("<p>Buy $50</p>")
+        }
     } else if (selectedIdentity == this) {
         $(this).removeClass("identity-selected");
         selectedIdentity = null;
@@ -92,7 +112,19 @@ $(document).on("click", ".identity-page-block", function (e) {
         $(selectedIdentity).removeClass("identity-selected");
         $(this).addClass("identity-selected");
         selectedIdentity = this;
-        $(".request-identity-button").html("<p>Buy</p>");
+        if (idType == "id_card") {
+            $(".request-identity-button").html("<p>Buy</p>")
+        } else if (idType == "a_driver_license") {
+            $(".request-identity-button").html("<p>Buy</p>")
+		} else if (idType == "b_driver_license") {
+            $(".request-identity-button").html("<p>Buy</p>")
+		} else if (idType == "c_driver_license") {
+            $(".request-identity-button").html("<p>Buy</p>")
+		} else if (idType == "d_driver_license") {
+            $(".request-identity-button").html("<p>Buy</p>")
+        } else if (idType == "weaponlicense") {
+            $(".request-identity-button").html("<p>Buy</p>")
+        }
     }
 });
 

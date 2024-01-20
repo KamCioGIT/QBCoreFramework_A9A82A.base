@@ -1148,3 +1148,9 @@ CreateThread(function()
         lastHeading = heading
     end
 end)
+
+local function checkseatbelt()
+	return seatbeltOn
+end
+
+exports('checkseatbelt', checkseatbelt)

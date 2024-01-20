@@ -5,10 +5,10 @@ local Translations = {
         ["missing_meter"] = "Dit voertuig heeft geen taximeter",
         ["no_vehicle"] = "Je zit niet in een voertuig",
         ["not_active_meter"] = "De taximeter is niet actief",
-        ["no_mission_active"] = "You dont have any mission to cancel"
+        ["no_mission_active"] = "Je hoeft geen enkele missie te annuleren"
     },
     success = {
-        ["mission_cancelled"] = "Mission canceled successfully"
+        ["mission_cancelled"] = "Missie succesvol geannuleerd"
     },
     info = {
         ["person_was_dropped_off"] = "Persoon is afgezet!",
@@ -18,10 +18,10 @@ local Translations = {
         ["job_vehicles"] = "[E] Werkvoertuigen",
         ["drop_off_npc"] = "[E] NPC Afzetten",
         ["call_npc"] = "[E] NPC Roepen",
-        ["blip_name"] = "Downtown Cab",
+        ["blip_name"] = "SasVegas Taxi",
         ["taxi_label_1"] = "Standaard Cab",
-        ["on_duty"] = "[E] - Go on duty",
-        ["on_duty"] = "[E] - Go off duty"
+        ["on_duty"] = "[E] - Ga in dienst",
+        ["on_duty"] = "[E] - Ga uit dienst"
         },
     menu = {
         ["taxi_menu_header"] = "Taxi Voertuigen",

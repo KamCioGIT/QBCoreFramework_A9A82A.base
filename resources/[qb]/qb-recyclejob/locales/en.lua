@@ -1,23 +1,23 @@
 local Translations = {
     success = {
-        you_have_been_clocked_in = "You Have Been Clocked In",
+        you_have_been_clocked_in =  "Je bent ingeklokt",
     },
     text = {
-        point_enter_warehouse = "[E] Enter Warehouse",
-        enter_warehouse= "Enter Warehouse",
-        exit_warehouse= "Exit Warehouse",
-        point_exit_warehouse = "[E] Exit Warehouse",
-        clock_out = "[E] Clock Out",
-        clock_in = "[E] Clock In",
-        hand_in_package = "Hand In Package",
-        point_hand_in_package = "[E] Hand In Package",
-        get_package = "Get Package",
-        point_get_package = "[E] Get Package",
-        picking_up_the_package = "Picking up the package",
-        unpacking_the_package = "Unpacking the package",
+        point_enter_warehouse =     "[E] Magazijn binnengaan",
+        enter_warehouse=            "Ga magazijn binnen",
+        exit_warehouse=             "Verlaat magazijn",
+        point_exit_warehouse =      "[E] Verlaat magazijn",
+        clock_out =                 "[E] Klok uit",
+        clock_in =                  "[E] Inklokken",
+        hand_in_package =           "Hand-in-pakket",
+        point_hand_in_package =     "[E] Hand-in-pakket",
+        get_package =               "Pakket ophalen",
+        point_get_package =         "[E] Pakket ophalen",
+        picking_up_the_package =    "Pakket ophalen",
+        unpacking_the_package =     "Het pakket uitpakken",
     },
     error = {
-        you_have_clocked_out = "You Have Clocked Out"
+        you_have_clocked_out =      "Je bent uitgeklokt"
     },
 }
 

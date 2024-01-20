@@ -1,38 +1,38 @@
 local Translations = {
     error = {
-        no_deposit = "$%{value} Deposit Required",
-        cancelled = "Cancelled",
-        vehicle_not_correct = "This is not a commercial vehicle!",
-        no_driver = "You must be the driver to do this..",
-        no_work_done = "You haven't done any work yet..",
-        backdoors_not_open = "The backdoors of the vehicle aren't open",
-        get_out_vehicle = "You need to step out of the vehicle to perform this action",
-        too_far_from_trunk = "You need to grab the boxes from the trunk of your vehicle",
-        too_far_from_delivery = "You need to be closer to the delivery point"
+        no_deposit =            "€%{value} aanbetaling vereist",
+        cancelled =             "Geannuleerd",
+        vehicle_not_correct =   "Dit is geen bedrijfsvoertuig!",
+        no_driver =             "Je moet de chauffeur zijn om dit te doen..",
+        no_work_done =          "Je hebt nog geen werk gedaan..",
+        backdoors_not_open =    "De achterdeuren van het voertuig zijn niet open",
+        get_out_vehicle =       "Om deze actie uit te voeren, moet je uit het voertuig stappen",
+        too_far_from_trunk =    "Je moet de dozen uit de kofferbak van je voertuig halen",
+        too_far_from_delivery = "Je moet dichter bij het afleverpunt zijn"
     },
     success = {
-        paid_with_cash = "$%{value} Deposit Paid With Cash",
-        paid_with_bank = "$%{value} Deposit Paid From Bank",
-        refund_to_cash = "$%{value} Deposit Paid With Cash",
-        you_earned = "You Earned $%{value}",
-        payslip_time = "You Went To All The Shops .. Time For Your Payslip!",
+        paid_with_cash =        "€%{value} aanbetaling contant betaald",
+        paid_with_bank =        "€%{value} aanbetaling betaald vanaf bank",
+        refund_to_cash =        "€%{value} aanbetaling contant betaald",
+        you_earned =            "Je hebt €%{value} verdiend",
+        payslip_time =          "Je bent naar alle winkels geweest. Tijd voor je loonstrook!",
     },
     menu = {
-        header = "Available Trucks",
-        close_menu = "⬅ Close Menu",
+        header =                "Beschikbare vrachtwagens",
+        close_menu =            "⬅ Menu sluiten",
     },
     mission = {
-        store_reached = "Store reached, get a box in the trunk with [E] and deliver to marker",
-        take_box = "Take A Box Of Products",
-        deliver_box = "Deliver Box Of Products",
-        another_box = "Get another Box Of Products",
-        goto_next_point = "You Have Delivered All Products, To The Next Point",
-        return_to_station = "You Have Delivered All Products, Return to Station",
-        job_completed = "You Have Completed Your Route, Please Collect Your Pay Cheque"
+        store_reached =         "Winkel bereikt, pak een doos in de kofferbak met [E] en lever af bij marker",
+        take_box =              "Neem een doos met producten",
+        deliver_box =           "Bezorg doos met producten",
+        another_box =           "Koop nog een doos met producten",
+        goto_next_point =       "Je hebt alle producten afgeleverd, naar het volgende punt",
+        return_to_station =     "U heeft alle producten afgeleverd, keer terug naar station",
+        job_completed =         "U heeft uw route voltooid, verzamel uw looncheque"
     },
     info = {
-        deliver_e = "~g~E~w~ - Deliver Products",
-        deliver = "Deliver Products",
+        deliver_e =             "~g~E~w~ - Producten leveren",
+        deliver =               "Producten bezorgen",
     }
 }
 

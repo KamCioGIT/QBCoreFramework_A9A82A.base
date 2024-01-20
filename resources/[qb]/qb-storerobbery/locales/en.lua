@@ -1,22 +1,22 @@
 local Translations = {
     error = {
-        minimum_store_robbery_police = "Not Enough Police (%{MinimumStoreRobberyPolice} Required)",
-        not_driver = "You Are Not The Driver",
-        demolish_vehicle = "You Are Not Allowed To Demolish Vehicles Now",
-        process_canceled = "Process canceled..",
-        you_broke_the_lock_pick = "You Broke The Lock Pick",
+        minimum_store_robbery_police =      "Niet genoeg politie (%{MinimumStoreRobberyPolice} vereist)",
+        not_driver =                        "Jij bent niet de bestuurder",
+        demolish_vehicle =                  "Je mag nu geen voertuigen slopen",
+        process_canceled =                  "Proces geannuleerd..",
+        you_broke_the_lock_pick =           "Je hebt de lockpick gebroken",
     },
     text = {
-        the_cash_register_is_empty = "The Cash Register Is Empty",
-        try_combination = "~g~E~w~ - Try Combination",
-        safe_opened = "Safe Opened",
-        emptying_the_register= "Emptying The Register..",
-        safe_code = "Safe Code: "
+        the_cash_register_is_empty =        "De kassa is leeg",
+        try_combination =                   "~g~E~w~ - Probeer combinatie",
+        safe_opened =                       "Veilig geopend",
+        emptying_the_register=              "Het register leegmaken..",
+        safe_code =                         "Veilige code:"
     },
     email = {
-        shop_robbery = "10-31 | Shop Robbery",
-        someone_is_trying_to_rob_a_store = "Someone Is Trying To Rob A Store At %{street} (CAMERA ID: %{cameraId1})",
-        storerobbery_progress = "Storerobbery in progress"
+        shop_robbery =                      "10-31 | Winkeloverval",
+        someone_is_trying_to_rob_a_store =  "Iemand probeert een winkel in %{street} te beroven (CAMERA-ID: %{cameraId1})",
+        storerobbery_progress =             "Winkeloverval bezig"
     },
 }
 

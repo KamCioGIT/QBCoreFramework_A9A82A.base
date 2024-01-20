@@ -108,11 +108,11 @@ local Translations = {
 		['questionlist10r'] = 'D',
     },
 	menu = {
-		['driving_theory_test'] = 'Driving Theory Test[€%{price}]',
-		['a_class_driving_practice_test'] = 'A-Class Driving Practice Test[€%{price}]',
-		['b_class_driving_practice_test'] = 'B-Class Driving Practice Test[€%{price}]',
-		['c_class_driving_practice_test'] = 'C-Class Driving Practice Test[€%{price}]',
-		['d_class_driving_practice_test'] = 'D-Class Driving Practice Test[€%{price}]',	
+		['driving_theory_test'] = 			'Theorie-examen autorijden[€%{price}]',
+		['a_class_driving_practice_test'] = 'Rijoefenexamen A-Klasse[€%{price}]',
+		['b_class_driving_practice_test'] = 'Rijoefenexamen B-Klasse[€%{price}]',
+		['c_class_driving_practice_test'] = 'Rijoefenexamen C-Klasse[€%{price}]',
+		['d_class_driving_practice_test'] = 'Rijoefenexamen D-Klasse[€%{price}]',
 	}
 }
 

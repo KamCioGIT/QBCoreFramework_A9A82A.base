@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SInteriorOrderData>
+  <startFrom value="3000" />
+  <proxies>
+	<Item>detran_int_rdshop_02</Item>
+  </proxies>
+</SInteriorOrderData>

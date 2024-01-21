@@ -5,24 +5,24 @@ Config.UseTarget = GetConvar('UseTarget', 'false') == 'true'
 Config.BailPrice = 250
 
 Config.Vehicles = {
-    ["flatbed"] = "Flatbed",
+    ["anwbflatbed2"] = "Flatbed",
 }
 
 Config.Locations = {
     ["main"] = {
         label = "Towing HQ",
-        coords = vector4(471.39, -1311.03, 29.21, 114.5),
+        coords = vector4(-339.4, -157.37, 44.59, 3.7),
     },
     ["vehicle"] = {
         label = "Flatbed",
-        coords = vector4(489.65, -1331.82, 29.33, 306.5),
+        coords = vector4(-357.45, -158.87, 38.85, 32.27),
     },
     ["dropoff"] = {
         label = "Vehicle Drop Off Location",
-        coords = vector3(491.00, -1314.69, 29.25)
+        coords = vector3(-390.07, -104.4, 38.84)
     },
     ["towspots"] = {
-        [1] =  {model = "sultanrs", coords = vector3(-2480.8720703125, -211.96409606934, 17.397672653198)},
+        [1] =  {model = "amdbx", coords = vector3(-2480.8720703125, -211.96409606934, 17.397672653198)},
         [2] =  {model = "zion", coords = vector3(-2723.392578125, 13.207388877869, 15.12806892395)},
         [3] =  {model = "oracle", coords = vector3(-3169.6235351563, 976.18127441406, 15.038360595703)},
         [4] =  {model = "chino", coords = vector3(-3139.7568359375, 1078.7182617188, 20.189767837524)},

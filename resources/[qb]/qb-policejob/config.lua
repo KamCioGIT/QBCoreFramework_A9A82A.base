@@ -130,12 +130,11 @@ Config.CarItems = {
 Config.AuthorizedVehicles = {
     -- Grade 0 and higher
     [0] = {
-        ['police'] = 'Police Car 1',
-        ['police2'] = 'Police Car 2',
-        ['police3'] = 'Police Car 3',
-        ['police4'] = 'Police Car 4',
-        ['policeb'] = 'Police Car 5',
-        ['policet'] = 'Police Car 6',
+        ['police2'] = 'Police Car 1',
+        ['police3'] = 'Police Car 2',
+        ['police4'] = 'Police Car 3',
+        ['policeb'] = 'Police Car 4',
+        ['policet'] = 'Police Car 5',
         ['sheriff'] = 'Sheriff Car 1',
         ['sheriff2'] = 'Sheriff Car 2',
     },

@@ -18,5 +18,3 @@ data_file 'VEHICLE_LAYOUTS_FILE' 'vehiclelayouts.meta'
 pmc_updates 'yes'
 pmc_github 'https://github.com/SASVegas/SASVEGAS'
 pmc_version '1.0'
-
-author 'Mike'

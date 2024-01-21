@@ -414,7 +414,7 @@ local function NearPed(model, coords, heading, gender, animDict, animName, scena
 end
 
 CreateThread(function() -- Create Blips
-    local blip = AddBlipForCoord(vector3(210.49, -1381.94, 29.58))
+    local blip = AddBlipForCoord(vector3(233.36, -1388.99, 30.46))
     SetBlipSprite(blip, 525)
     SetBlipDisplay(blip, 4)
     SetBlipScale(blip, 0.7)
@@ -458,7 +458,7 @@ exports['qb-target']:AddTargetModel(`ig_paper`, {
             event = 'driverschool:client:payTest',
             icon = 'fas fa-id-card',
             label = Lang:t('menu.driving_theory_test', {price = Config.Prices.N}),
-			type = 'N',
+			type = 'client',
 			canInteract = function()
 				PlayerData = QBCore.Functions.GetPlayerData()
 				if PlayerData.metadata['licences'].N then

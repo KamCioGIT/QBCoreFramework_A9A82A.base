@@ -30,10 +30,10 @@ Config.Prices = {
 }
 
 Config.VehicleModels = {
-	A  = 'sanchez',
-	B = 'blista',	
-	C = 'phantom3',
-	D = 'bus',
+	A = 'sanchez',
+	B = 'vwpolo',	
+	C = 'hauler',
+	D = 'coach',
 	--E = '',
 	--F = '',
 	--G = '',
@@ -213,16 +213,11 @@ Config.CheckPoints = {
 Config.PedList = {
 	{
 		model = 'ig_paper',
-		coords = vector3(210.49, -1381.94, 29.58),               
-		heading = 140.35,
-		gender = 'male',
-        scenario = 'WORLD_HUMAN_CLIPBOARD'
-	},
-	{
-		model = 'ig_paper',
-		coords = vector3(250.96, -1413.1, 29.59),              
-		heading = 32.17,
+		coords = vector3(212.0017, -1399.4791, 29.5785),               
+		heading = 329.6,
 		gender = 'male',
         scenario = 'WORLD_HUMAN_CLIPBOARD'
 	},
 }
+
+

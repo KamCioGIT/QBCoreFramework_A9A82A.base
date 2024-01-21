@@ -247,6 +247,7 @@ local Vehicles = {
     { model = 'forklift',      name = 'Forklift',                      brand = 'HVY',             price = 30000,   category = 'utility',        type = 'automobile', shop = 'truck' },
     { model = 'docktug',       name = 'Docktug',                       brand = 'HVY',             price = 30000,   category = 'utility',        type = 'automobile', shop = 'truck' },
     { model = 'airtug',        name = 'Airtug',                        brand = 'HVY',             price = 30000,   category = 'utility',        type = 'automobile', shop = 'truck' },
+    { model = 'anwbflatbed2',  name = 'ANWB Flatbed',            brand = 'ANWB',            price = 30000,   category = 'utility',        type = 'automobile', shop = 'truck' },
     --- Vans (12)
     { model = 'bison',         name = 'Bison',                         brand = 'Bravado',         price = 18000,   category = 'vans',           type = 'automobile', shop = 'None' },
     { model = 'bobcatxl',      name = 'Bobcat XL Open',                brand = 'Vapid',           price = 13500,   category = 'vans',           type = 'automobile', shop = 'None' },

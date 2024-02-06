@@ -1,0 +1,38 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: unset;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    /* background: url(https://s3-screenshots.int-cdn.lcpdfrusercontent.com/monthly_2019_02/0432.jpg.bf36504640993ebf97f28d86fa6fe30d.jpg);
+    background-size: cover; */
+}
+
+:root {
+    --theme: #fff;
+    --theme-darker: #f6f6f6;
+    --theme-darker-3: #eeeeee;
+    --theme-darker-2:rgba(255, 255, 255, 0.1);
+    --theme-anim-from:rgba(255, 255, 255, 0.1);
+    --theme-anim-to:rgba(255, 255, 255, 0.3);
+    --theme-next: rgb(8, 8, 8);
+    --theme-opposite: rgb(8, 8, 8);
+    --theme-opposite-2: rgb(18, 18, 18);
+    --theme-opposite-light: rgb(26, 26, 26);
+    --theme-opposite-light-2: rgb(66, 66, 66);
+    --theme-opposite-light-3: rgb(171, 171, 171);
+    --theme-opposite-opacity: rgba(8, 8, 8,0.9);
+    --theme-opposite-opacity-2: rgba(8, 8, 8,0.5);
+    --theme-color: #000;
+    --motive: #ee1c3e;
+}

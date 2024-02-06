@@ -1,0 +1,2337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Oswald', sans-serif;
+    display: block;
+    user-select: none;
+    overflow: hidden;
+}
+
+:root{
+    --maincolor: #6e6dbd;
+    --darkercolor: #242142;
+}
+
+button{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button:disabled{
+    filter: brightness(70%);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+money{
+    color: rgb(3, 134, 3);
+    white-space: nowrap;
+}
+
+.buy_section{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height:100%;
+    width:100%;
+    box-shadow: inset 0px 0px 100vw 8vh #000000;
+    transition: box-shadow 0.7s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+    display: none;
+    opacity: 0;
+}
+
+.buy_section h1{
+    position: absolute;
+    left: 58.5px;
+    font-size: 78px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 0px 0px 6px white;
+}
+
+.buy_section h4{
+    position: absolute;
+    bottom: 19.5px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 39px;
+    color: rgba(255, 255, 255, 0.68);
+    text-shadow: 0px 0px 10px var(--maincolor);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.buy_section .btn_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 432px;
+    width: 780px;
+    transition: all 0.4s ease-in-out;
+}
+
+.buy_section .menu_btn{
+    position: relative;
+    height: 78px;
+    width: 331.5px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 2.5px var(--maincolor);
+    box-shadow: 0px 0px 3px var(--maincolor);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+.buy_section .menu_btn h2{
+    margin-top: 7px;
+    font-size: 39px;
+    font-weight: 800;
+    color: #F5F5F5;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.buy_section .menu_btn:hover h2{
+    transform: translateY(-10px);
+    scale: 1.02;
+    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.616);
+}
+
+.buy_section .btn_container .menu_btn:active{
+    transition: all 0.1s;
+    box-shadow: none;
+}
+
+.buy_section .btn_container #pets{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.buy_section .btn_container #pets:hover{
+    transform: translate(-50%, -55%);
+}
+
+.buy_section .btn_container #pets:active{
+    transform: translate(-50%, -50%);
+}
+
+.buy_section .btn_container #shop{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.buy_section .btn_container #shop:hover{
+    transform: translate(-50%, -55%);
+}
+
+.buy_section .btn_container #shop:active{
+    transform: translate(-50%, -50%);
+}
+
+.buy_section #jobs{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    width: 180px;
+    transform: translate(-50%, -50%);
+}
+
+.buy_section #jobs:hover{
+    transform: translate(-50%, -55%);
+}
+
+.buy_section #jobs:active{
+    transform: translate(-50%, -50%);
+}
+
+.buy_section .pet_container{
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    height: 756px;
+    width: 448px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    animation: borderanim 5s linear infinite alternate;
+}
+
+.back{
+    position: relative;
+    float: right;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: 48px;
+    width: 48px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 35px;
+    border-radius: 0.4vw;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.back:hover{
+    transform: translateY(-10%);
+}
+
+.back:active{
+    transform: translateY(0%);
+}
+
+.name-container .back{
+    float: left;
+}
+
+.transfer_menu .back{
+    float: left;
+}
+
+.buy_section .pet_container .back{
+    float: left;
+}
+
+.buy_section .bg .back{
+    float: left;
+}
+
+.buy_section .pet_container h2{
+    position: absolute;
+    margin-top: 0.5vw;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.411);
+}
+
+.buy_section .pet_container .pet_elements_container{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 89%;
+    width: 95%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.buy_section .pet_container .pet_elements_container .pet_element{
+    height: 13%;
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: rgba(0, 0, 0, 0.437);
+    border: none;
+    border-radius: 15px;
+    margin-top: 8px;
+    transition: all 0.4s ease;
+}
+
+.buy_section .pet_container .pet_elements_container .pet_element:hover{
+    scale: 1.05;
+}
+
+.buy_section .pet_container .pet_elements_container .pet_element a{
+    font-size: 17.5px;
+    color: rgb(198, 198, 198);
+}
+
+table{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+table th{
+    font-size: 28px;
+    color: white;
+}
+
+table .image{
+    width: 25%;
+}
+
+table .price{
+    line-height: 23px;
+    font-size: 28px;
+    width: 30%;
+}
+
+.buy_section .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.281);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.buy_section .money_type{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20%;
+    width: 30%;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+.buy_section .money_type .back{
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.buy_section .money_type h2{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    height: 50%;
+    width: 80%;
+    transform: translate(-50%, 0%);
+    font-size: 40px;
+    line-height: 50px;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.buy_section .money_type .m_t{
+    height: 78px;
+    width: 136.5px;
+    margin: 20px;
+    border-radius: 7.8px;
+    border: none;
+    font-size: 47px;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: all 0.3s;
+    color: white;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    background-color: transparent;
+}
+
+.buy_section .money_type .m_t:hover{
+    transform: translateY(-10%);
+}
+
+.buy_section .money_type .m_t:active{
+    transform: translateY(0%);
+}
+
+.buy_section .money_type .m_t i{
+    margin-top: -40px;
+}
+
+.buy_section .money_type #cash{
+    position: absolute;
+    bottom: 0px;
+    left: 12%;
+    color: #03C988;
+}
+
+.buy_section .money_type #card{
+    position: absolute;
+    bottom: 0px;
+    right: 12%;
+    color: #03abc9;
+}
+
+.buy_section .buy_container{
+    position: absolute;
+    top: 75%;
+    right: 10%;
+    height: 162px;
+    width: auto;
+    min-width: 25%;
+    background: rgb(0,0,0);
+    background: radial-gradient( rgba(0, 0, 0, 0.813) 0%, rgba(34,193,195,0) 70%);
+    opacity: 0;
+    display: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.buy_section .buy_btn{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 78px;
+    width: 175px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 2.5px var(--maincolor);
+    box-shadow: 0px 0px 3px var(--maincolor);
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+    font-size: 43px;
+    font-weight: 800;
+}
+
+.buy_section .buy_btn h2{
+    position: relative;
+    margin-top: 7px;
+    font-size: 39px;
+    font-weight: 800;
+    color: #F5F5F5;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.buy_section .buy_btn:hover h2{
+    transform: translateY(-10px);
+    scale: 1.02;
+    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.616);
+}
+
+.buy_section .buy_btn:hover{
+    transform: translate(-50%, -55%);
+}
+
+.buy_section .buy_btn:active{
+    transform: translate(-50%, -50%);
+    transition: all 0.1s;
+}
+
+.buy_section .changetype{
+    position: absolute;
+    top: 90%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    height: 48.7px;
+    width: 101.4px;
+    background-image: linear-gradient(225deg, rgba(184, 184, 184, 0.535), transparent);
+    background-color: transparent;
+    border: solid 2px rgba(184, 184, 184, 0.647);
+    border-radius: 7px;
+    color: white;
+    font-size: 19.5px;
+    font-weight: 500;
+}
+
+.buy_section .changetype:hover{
+    transform: translate(-50%, -60%);
+}
+
+.buy_section .changetype:active{
+    transform: translate(-50%, -50%);
+    transition: all 0.1s;
+}
+
+.buy_section .changecollar{
+    position: absolute;
+    top: 90%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    height: 48.7px;
+    width: 101.4px;
+    background-image: linear-gradient(225deg, rgba(184, 184, 184, 0.535), transparent);
+    background-color: transparent;
+    border: solid 2px rgba(184, 184, 184, 0.647);
+    border-radius: 7px;
+    color: white;
+    font-size: 17.55px;
+    font-weight: 500;
+}
+
+.buy_section .changecollar:hover{
+    transform: translate(-50%, -60%);
+}
+
+.buy_section .changecollar:active{
+    transform: translate(-50%, -50%);
+    transition: all 0.1s;
+}
+
+.buy_section .buy_container .inf_container{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    height: 80%;
+    width: auto;
+    min-width: 25%;
+    text-align: center;
+    color: white;
+    font-size: 23.4px;
+    font-weight: 500;
+}
+
+.buy_section .buy_container .inf_container h3{
+   top: -19.5px;
+   margin: 0;
+   font-weight: 700;
+}
+
+.buy_section .buy_container .inf_container a{
+    color: rgb(231, 231, 231);
+}
+
+.buy_section .buy_container .inf_container hr{
+    width: 100%;
+    background-color: white;
+}
+
+.buy_section .buy_container #first{
+    left: 0%;
+}
+
+.buy_section .buy_container #second{
+    right: 0%;
+}
+
+.buy_section .shop_container{
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    height: 70%;
+    width: 23%;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
+    display: none;
+    opacity: 0;
+}
+
+.buy_section .shop_container .buy_btn{
+    top: 90%;
+}
+
+.buy_section .shop_container h3{
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 800;
+    font-size: 45px;
+    color: rgb(241, 241, 241);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.411);
+}
+
+.buy_section .shop_container .shop_elements_container{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 55%;
+    width: 95%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.buy_section .shop_container h5{
+    position: absolute;
+    margin-top: 10px;
+    transform: translate(-50%, 0%);
+    left: 50%;
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.411);
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element{
+    position: relative;
+    height: 22%;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: var(--darkercolor);
+    border-radius: 15px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element .item{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translate( 0%,-50%);
+    width: auto;
+    height: 80%;
+    border-radius: 7px;
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element h11{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 800;
+    font-size: 27.3px;
+    color: rgb(241, 241, 241);
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element h6{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 600;
+    font-size: 18px;
+    color: rgba(241, 241, 241, 0.719);
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element .arrow1{
+    color: white;
+    transition: 0.6s;
+    font-size: 35.1px;
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element .arrow1:active{
+    transition: 0.05s;
+    scale: 0.9;
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element .left{
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element .right{
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-50%,-50%);
+}
+
+.buy_section .shop_container .shop_elements_container .shop_element .num{
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%,-50%);
+    font-weight: 800;
+    font-size: 35px;
+    color: rgb(241, 241, 241);
+}
+
+.pet_elements_container table .image .elm_img{
+    height: 74.1px;
+    width: auto;
+}
+
+.pet-section{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    height: 60px;
+    width: 200px;
+    background-color: rgba(21, 21, 21, 0.59);
+    border-radius: 15px;
+    opacity: 0;
+    display: none;
+    transition: all 1s ease-in-out;
+}
+
+.pet-section .big-mode{
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.pet-section .small-mode{
+    transition: all 0.3s ease-in-out;
+}
+
+.pet-section h1{
+    color: white;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.rename_btn{
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.649);
+    font-size: 20px;
+}
+
+.pet-section .pet_img_big{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 134.4px;
+}
+
+.pet-section .pet_img_small{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    height: 90%;
+}
+
+.pet-section .big-mode .pet_datas{
+    position: absolute;
+    top: 17%;
+    height: 15%;
+    width: 100%;
+    display: flex;     
+    flex-direction: row;           
+    flex-wrap: nowrap;            
+    justify-content: space-between;
+}
+
+.pet-section .big-mode .pet_datas .data{
+    height: 100%;
+    font-size: 50px;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.pet-section .big-mode .pet_datas .data h2{
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: -10px;
+}
+
+.pet-section .pet_datas #drink{
+    background: linear-gradient(rgba(255, 255, 255, 0.447) 100%, #147cea 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 40px;
+}
+
+.pet-section .pet_datas #healt{
+    background: linear-gradient(rgba(255, 255, 255, 0.447) 100%, #ea1414 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pet-section .pet_datas #food{
+    background: linear-gradient(rgba(255, 255, 255, 0.447) 100%, #eae314 0%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 40px;
+}
+
+.pet-section .small-mode .pet_datas{
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    height: 100%;
+    width: 65%;
+    display: flex;     
+    flex-direction: row;           
+    flex-wrap: nowrap;            
+    justify-content: space-between;
+}
+
+.pet-section .small-mode .pet_datas .data{
+    font-size: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.pet-section .small-mode .pet_datas #drink{
+    margin-left: 0vw;
+}
+
+.pet-section .small-mode .pet_datas #food{
+    margin-right: 0vw;
+}
+
+.delete_btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 25px;
+    width: 70px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.686);
+    color: white;
+    font-size: 12.5px;
+    box-shadow:inset 0px 0px 0px rgba(0, 0, 0, 0.566), 5px 5px 10px rgba(0, 0, 0, 0.566);
+}
+
+.transfer{
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    height: 25px;
+    width: 70px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 12.5px;
+    box-shadow:inset 0px 0px 0px rgba(0, 0, 0, 0.566), 5px 5px 10px rgba(0, 0, 0, 0.566);
+}
+
+.pet-section .backmini{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 38.4px;
+    width: 38.4px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.728);
+    font-size: 25px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.backmini:hover{
+    scale: 1.08;
+}
+
+.backmini:active{
+    transition: 0.1s;
+    scale:0.95;
+}
+
+
+.pet-section .btn_container_1line{
+    position: absolute;
+    top: 33%;
+    width: 100%;
+    height: 20%;
+    display: flex;     
+    flex-direction: row;           
+    flex-wrap: nowrap;            
+    justify-content: space-between;
+}
+
+.pet-section .btn_container_2line{
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    height: 20%;
+    display: flex;     
+    flex-direction: row;           
+    flex-wrap: nowrap;            
+    justify-content: space-between;
+}
+
+.pet-section .btn_container_3line{
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    height: 13%;
+    display: flex;     
+    flex-direction: row;           
+    flex-wrap: nowrap;            
+    justify-content: space-between;
+}
+
+.pet-section .btn_c{
+    height: 82.5px;
+    width: 82.5px;
+    border-radius: 100%;
+    margin: 15px;
+    border: none;
+    font-size: 44px;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.566), 5px 5px 10px rgba(0, 0, 0, 0.566);
+    transition: all 0.3s;
+}
+
+.pet-section .btn_c:hover{
+    transform: translateY(-5%);
+}
+
+.pet-section .btn_c:active{
+    transition: all 0.1s;
+    transform: translateY(0%);
+}
+
+.pet-section .btn_c:hover i{
+    transform: translateY(-5px);
+    scale: 1.02;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.616);
+}
+
+.pet-section .btn_c:active i{
+    transition: all 0.1s;
+    transform: translateY(0px);
+    scale: 1;
+    text-shadow: none;
+}
+
+.pet-section .btn_c i{
+    transition: all 0.4s;
+    text-align: center;
+    margin-top: 19px;
+}
+
+.pet-section .btn_c h2{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.pet-section .btn_l{
+    height: 48px;
+    width: 153.6px;
+    border-radius: 3vh;
+    margin: 15px;
+    border: none;
+    font-size: 39px;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow:inset 0px 0px 0px rgba(0, 0, 0, 0.566), 5px 5px 10px rgba(0, 0, 0, 0.566);
+    transition: all 0.3s ease;
+}
+
+.pet-section .btn_l:hover{
+    transform: translateY(-5%);
+}
+
+.pet-section .btn_l:active{
+    transition: all 0.1s;
+    transform: translateY(0%);
+}
+
+.pet-section .btn_l:hover h2{
+    transform: translateY(-5px);
+    scale: 1.02;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.616);
+}
+
+.pet-section .btn_l:active h2{
+    transition: all 0.1s;
+    transform: translateY(0px);
+    scale: 1;
+    text-shadow: none;
+}
+
+.pet-section .btn_l i{
+    text-align: left;
+    width: 100%;
+    margin-top: 16px;
+    opacity: 0.6;
+    transform: rotate(20deg);
+}
+
+.pet-section .btn_l h2{
+    transition: all 0.4s ease;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: -56px;
+    white-space: nowrap;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.598);
+    color: white;
+}
+
+.pet-section #follow{
+    background-image: linear-gradient(45deg, rgba(17,218,168,1) 0%, rgba(3,198,255,1) 100%);
+}
+
+.pet-section #control{
+    background-image: linear-gradient(45deg, rgba(17,180,218,1) 0%, rgba(3,88,255,1) 100%);
+}
+
+.pet-section #emotes{
+    background-image: linear-gradient(45deg, rgba(17,105,218,1) 0%, rgba(134,104,182,1) 100%);
+}
+
+.pet-section #ball{
+    background-image: linear-gradient(45deg, rgba(89,0,255,1) 0%, rgba(201,0,255,1) 100%);
+}
+
+.pet-section #attack{
+    background-image: linear-gradient(45deg, rgba(201,0,255,1) 0%, rgba(255,0,104,1) 100%);
+}
+
+.pet-section #sit{
+    background-image: linear-gradient(45deg, rgba(239,0,255,1) 0%, rgba(255,0,0,1) 100%);
+}
+
+.pet-section #wake{
+    background-image: linear-gradient(45deg, rgba(0,255,226,1) 0%, rgb(134, 156, 255) 100%);
+}
+
+.pet-section #sleep{
+    background-image: linear-gradient(45deg, rgba(0,56,255,1) 0%, rgb(255, 171, 229) 100%);
+}
+
+.pet-section .logo_container{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 90%;
+    height: 10%;
+    opacity: 0.7;
+}
+
+.pet-section .logo_container .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100%;
+}
+
+.pet-section .logo_container D{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    font-size: 32.6px;
+    font-weight: 800;
+    background-image: linear-gradient(60deg, #11d4e2, #ef3aff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.pet-section .logo_container N{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    font-size: 32.6px;
+    font-weight: 800;
+    background-image: linear-gradient(60deg, #db11e2, #d4592d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.pet_switch_con{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 52%;
+    height: 8%;
+    z-index: 10;
+}
+
+.pet_switch_con .arrows{
+    height: 100%;
+    width: 38.4px;
+    font-size: 38.4px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.pet_switch_con .arrows:hover{
+    box-shadow: none;
+    scale: 1.08;
+}
+
+.pet_switch_con .arrows:active{
+    transition: 0.1s;
+    scale:0.95;
+}
+
+.pet_switch_con #right{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.name-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.514);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.name-container .back{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.name-container .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25%;
+    width: 20%;
+    border-radius: 15px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    transition: all 0.4s ease-in-out;
+}
+
+.name-container h1{
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 33px;
+    text-align: center;
+}
+
+.name-container #name{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 65px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius:10px;
+    background-color: var(--maincolor);
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    padding-left: 1vw;
+}
+
+input::placeholder {
+    font-weight: 400;
+    opacity: .7;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+}
+
+.name-container .submit_btn{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 3.5vw;
+    width: 8vw;
+    background-image: linear-gradient(225deg, var(--maincolor), transparent);
+    background-color: transparent;
+    border: solid 2px var(--maincolor);
+    border-radius: 0.4vw;
+    color: white;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+.transfer_menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.514);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.transfer_menu .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 340px;
+    width: 400px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    border-radius: 15px;
+}
+
+.transfer_menu .container .back{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.transfer_menu .container h1{
+    position: absolute;
+    top: 3%;
+    left: 55%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    text-align: center;
+}
+
+.transfer_menu input{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 65px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius:10px;
+    background-color: var(--maincolor);
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.long_btn{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 70px;
+    width: 250px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 2.5px var(--maincolor);
+    box-shadow: 0px 0px 3px var(--maincolor);
+}
+
+.long_btn h2{
+    position: relative;
+    margin-top: 4px;
+    font-size: 39px;
+    font-weight: 800;
+    color: #F5F5F5;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.long_btn:hover h2{
+    transform: translateY(-10px);
+    scale: 1.02;
+    text-shadow: 0px 10px 5px rgba(0, 0, 0, 0.616);
+}
+
+.long_btn:hover{
+    transform: translate(-50%,-60%);
+}
+
+.long_btn:active{
+    transition: all 0.1s;
+    transform: translate(-50%,-50%);
+}
+
+.sure{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.514);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.sure .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 550px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    border-radius: 15px;
+}
+
+.sure .container h1{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    height: 50%;
+    width: 80%;
+    transform: translate(-50%, 0%);
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sure .container #yes{
+    position: absolute;
+    bottom: 20px;
+    right: 12%;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 2.5px var(--maincolor);
+    box-shadow: 0px 0px 3px var(--maincolor);
+    padding-top: 5px;
+}
+
+.sure .container #cancel{
+    position: absolute;
+    bottom: 20px;
+    left: 12%;
+    background-image: linear-gradient(135deg, rgb(56, 56, 56), transparent);
+    background-color: transparent;
+    border: solid 2px rgb(56, 56, 56);
+    box-shadow: 0px 0px 3px rgb(56, 56, 56);
+}
+
+.sure .container i{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.tasks{
+    height: 70px;
+    width: 160px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    transition: all 0.3s;
+}
+
+.tasks:hover{
+    transform: translateY(-10%);
+}
+
+.tasks:active{
+    transform: translateY(0%);
+}
+
+.tasks_container{
+    position:absolute;
+    bottom: 10%;
+    left: 25%;
+    height: auto;
+    width: auto;
+    display: flex;     
+    flex-direction: row;           
+    flex-wrap: nowrap;            
+    justify-content: space-between;
+}
+
+.tasks_container .inprogress{
+    height: 134.4px;
+    min-width: 172.8px;
+    margin-top: 10px;
+    background-image: radial-gradient(circle, rgba(72, 52, 133, 0.774) 0%, transparent 80%);
+    color: rgb(215, 215, 215);
+    font-size: 23px;
+    font-weight: 800;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.tasks_container .inprogress .pet_img{
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+    height: 57.6px;
+}
+
+.tasks_container .inprogress .name{
+    text-align: center;
+    margin-top: -13.44px;
+    margin-bottom: -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tasks_container .inprogress hr{
+    width: 80%;
+    border-width: 3px;
+    border-radius: 3px;
+    margin-left: 10%;
+    color: rgb(255, 255, 255);
+}
+
+.tasks_container .inprogress .state{
+    margin-top: -13.44px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*///////////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+.shop_management{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 900px;
+    background-color: rgb(41, 37, 44);
+    color: rgb(233, 233, 233);
+    border-radius: 15px;
+    display: none;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.shop_management .left_title{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(-135deg, rgb(207, 205, 209), rgb(181, 173, 187));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 43px;
+}
+
+.shop_management .left_title span{
+    background: -webkit-linear-gradient(-135deg, #b34b4b, #803333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.shop_management .sell_btn{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    height: 50px;
+    width: 160px;
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    background-image: linear-gradient(-135deg, #FF6969, #aa4545);
+}
+
+.shop_management .top_controls{
+    margin-top: 20px;
+    margin-bottom: -90px;
+    height: 50px;
+    width: 420px;
+    background-color: rgb(60, 55, 65);
+    border-radius: 13px;
+    padding-top: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    animation: appearcontrols 0.6s ease;
+}
+
+.shop_management .top_controls .top_btn{
+    height: 40px;
+    width: 125px;
+    background-color: rgb(80, 73, 87);
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    border-radius: 10px;
+}
+
+.shop_management .top_controls .top_btn.current{
+    background-color: rgb(121, 112, 131);
+}
+
+.shop_management .big_container{
+    height: 245px;
+    width: 410px;
+    background-image: linear-gradient(135deg, rgb(115, 108, 124), rgb(68, 60, 78));
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.397);
+}
+
+.shop_management .big_container .title{
+    font-size: 35px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+
+.shop_management .big_container .subtitle{
+    margin-top: 13px;
+    margin-bottom: -5px;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(221, 221, 221);
+    text-align: center;
+}
+
+.shop_management .big_container .stock_num{
+    margin-top: -6px;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.progress_bar_con{
+    height: 15px;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 20px;
+    background-color: rgb(60, 55, 65);
+    overflow: hidden;
+}
+
+.progress_bar_con .progress_bar{
+    height: 100%;
+    width: 0%;
+    background-color: #99D89F;
+    border-radius: 10px;
+    transition: all 0.7s ease;
+}
+
+.shop_management .big_container .employees{
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+
+.shop_management .big_container .balance{
+    margin-top: -10px;
+    font-size: 52px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+
+.balance_long_btn{
+    margin-bottom: 8px;
+    height: 52px;
+    width: 300px;
+    background-image: linear-gradient(135deg, rgb(78, 73, 83), rgb(53, 51, 56));
+    border-radius: 12px;
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.397);
+}
+
+.shop_management .small_container{
+    position: relative;
+    height: 200px;
+    width: 265px;
+    background-color: #99D89F;
+    border-radius: 15px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.397);
+    animation: appearsmallcons 0.6s ease;
+}
+
+.shop_management .small_container.low{
+    background-image: linear-gradient(135deg, #FF6969, #a04444);
+}
+
+.shop_management .small_container.medium{
+    background-image: linear-gradient(135deg, #ffda36, #ac9325);
+}
+
+.shop_management .small_container.good{
+    background-image: linear-gradient(135deg, #03C988, #148660);
+}
+
+.shop_management .small_container .count{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+}
+
+.red_text{
+    color: #fd8080 !important;
+}
+
+.shop_management .small_container .pet_img{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 130px;
+}
+
+.shop_management .small_container .progress_bar{
+    background-color: var(--maincolor);
+}
+
+.order_fade_up{
+    position: absolute;
+    top: 110px;
+    margin-left: 15px;
+    width: 500px;
+    height: 20px;
+    background-image: linear-gradient(rgb(60, 55, 65), transparent);
+    z-index: 10;
+}
+
+.order_fade_down{
+    position: absolute;
+    bottom: 30px;
+    margin-left: 15px;
+    width: 500px;
+    height: 20px;
+    background-image: linear-gradient(transparent, rgb(60, 55, 65));
+    z-index: 10;
+}
+
+.shop_management .shop_items_con{
+    height: 460px;
+    width: 530px;
+    background-color: rgb(60, 55, 65);
+    padding-bottom: 15px;
+    border-radius: 15px;
+    overflow: auto;
+}
+
+.shop_management .shop_items_con .item_element{
+    position: relative;
+    padding-top: 13px;
+    animation: appearitems 0.6s ease;
+}
+
+.shop_management .shop_items_con .item_element .details{
+    position: relative;
+    height: 62px;
+    width: 362px;
+    background-image: linear-gradient(135deg, rgb(121, 116, 128), rgb(80, 72, 90));
+    border-radius: 12px;
+}
+
+.shop_management .shop_items_con .item_element .details .pet_img{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 52px;
+}
+
+.shop_management .shop_items_con .item_element .details .name{
+    margin-top: 5px;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+
+.shop_management .shop_items_con .item_element .details .count{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+}
+
+.shop_management .shop_items_con .item_element .details .price{
+    text-align: right;
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(223, 223, 223);
+}
+
+.shop_management .shop_items_con .item_element input{
+    height: 62px;
+    width: 120px;
+    background-color: rgb(80, 74, 87);
+    border-radius: 12px;
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.shop_management .shop_items_con .item_element input::placeholder {
+    font-weight: 800;
+    opacity: .7;
+    color: white;
+    font-size: 35px;
+}
+
+
+.shop_management .small_controls{
+    float: inline-end;
+    height: 50px;
+    width: 300px;
+    background-color: rgb(60, 55, 65);
+    border-radius: 13px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.shop_management .small_controls .control_btn{
+    height: 40px;
+    width: 136px;
+    background-color: rgb(80, 73, 87);
+    font-size: 25px;
+    font-weight: 800;
+    color: white;
+    border-radius: 10px;
+}
+
+.shop_management .small_controls .control_btn.current{
+    background-color: rgb(121, 112, 131);
+}
+
+.shop_management .description{
+    float: inline-end;
+    margin-top: 12px;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(60, 55, 65);
+    border-radius: 13px;
+    color: rgb(224, 224, 224);
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+.shop_management .description .order_element{
+    position: relative;
+    margin-top: 5px;
+    height: 50px;
+    width: 280px;
+    margin-left: 10px;
+    border-radius: 12px;
+    background-image: linear-gradient(135deg, rgb(95, 89, 100),rgb(82, 74, 92));
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.shop_management .description .order_element .item{
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: 15px ;
+}
+
+.shop_management .description .order_element .items{
+    color: rgb(224, 224, 224);
+    margin-top: 5px;
+    width: 250px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.shop_management .description .order_element .show_more{
+    float: inline-start;
+    margin-left: -5px;
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    transition: all 0.4s;
+}
+
+.shop_management .description .order_element .order_del_btn{
+    float: inline-end;
+    height: 42px;
+    width: 42px;
+    color: white;
+    font-weight: 800;
+    border-radius: 11px;
+    margin-top: 4px;
+    margin-right: 4px;
+    background-color: rgb(210, 100, 100);
+}
+
+.shop_management .description .title{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: white;
+}
+
+.shop_management .description input{
+    height: 50px;
+    width: 250px;
+    margin-top: 10px;
+    margin-left: 25px;
+    background-color: rgb(80, 74, 87);
+    border-radius: 12px;
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.shop_management .description input::placeholder {
+    font-weight: 800;
+    opacity: .7;
+    color: white;
+    font-size: 32px;
+}
+
+.shop_management .description .des{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(228, 228, 228);
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.no_orders_text{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 800;
+    color: rgb(219, 219, 219);
+}
+
+.shop_management .max_order{
+    margin-top: 12px;
+    margin-right: 10px;
+    font-size: 45px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.shop_management .order_price{
+    margin-top: -10px;
+    margin-right: 10px;
+    font-size: 45px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.shop_management .bottom_btn_con{
+    position: absolute;
+    bottom: 30px;
+    right: 33px;
+}
+
+.shop_management .bottom_btn_con .reset_btn{
+    height: 65px;
+    width: 95px;
+    background-color: rgb(210, 100, 100);
+    border-radius: 14px;
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.shop_management .bottom_btn_con .order_btn{
+    height: 65px;
+    width: 190px;
+    background-color: rgb(121, 112, 131);
+    border-radius: 14px;
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+@keyframes appearcontrols{
+    0%{
+        scale: 0.8;
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+@keyframes appearsmallcons{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    70%{
+        transform: translateX(-5%);
+    }
+    90%{
+        opacity: 1;
+        transform: translateX(3%);
+        
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes appearitems{
+    0%{
+        padding-top: 60px;
+    }
+    70%{
+        padding-top: 10px;
+    }
+    90%{
+        padding-top: 15px;
+    }
+    100%{
+        padding-top: 13px;
+    }
+}
+
+@keyframes appearitems2{
+    0%{
+        margin-top: 30px;
+    }
+    70%{
+        margin-top: 10px;
+    }
+    90%{
+        margin-top: 15px;
+    }
+    100%{
+        margin-top: 12px;
+    }
+}
+
+@keyframes wrongtext{
+    0%{
+        text-shadow: 0px 0px 4px rgb(255, 73, 73);
+        color: rgb(255, 73, 73);
+    }
+    20%{
+        text-shadow: 0px 0px 4px rgb(255, 73, 73);
+        transform: translateX(5%);
+        color: rgb(255, 73, 73);
+    }
+    40%{
+        text-shadow: 0px 0px 4px rgb(255, 73, 73);
+        transform: translateX(-5%);
+        color: rgb(255, 73, 73);
+    }
+    60%{
+        text-shadow: 0px 0px 4px rgb(255, 73, 73);
+        transform: translateX(5%);
+        color: rgb(255, 73, 73);
+    }
+    80%{
+        text-shadow: 0px 0px 4px rgb(255, 73, 73);
+        transform: translateX(-5%);
+        color: rgb(255, 73, 73);
+    }
+}
+
+@keyframes savetext{
+    0%{
+        color: #1ce9a5;
+        text-shadow: 0px 0px 4px #1ce9a5;
+    }
+    20%{
+        transform: translateY(-5%);
+    }
+}
+
+.stock_title{
+    height: 55px;
+    width: 800px;
+    background-image: linear-gradient(135deg, rgb(90, 85, 97), rgb(74, 66, 85));
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.stock_title h1{
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.stock_container{
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    z-index: 1;
+    padding-top: 10px;
+}
+
+.fade_up{
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient( rgb(41, 37, 44), transparent);
+    z-index: 10;
+}
+
+.stock_container .stock_element{
+    margin-top: 12px;
+    height: 65px;
+    width: 800px;
+    background-image: linear-gradient(135deg, rgb(98, 94, 104), rgb(66, 58, 77));
+    border-radius: 15px;
+    animation: appearitems2 0.6s ease;
+    transition: 0.3s ease;
+}
+
+.stock_container .stock_element h1{
+    margin-top: 10px;
+    font-size: 34px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+}
+
+.stock_container .stock_element h2{
+    margin-top: 10px;
+    font-size: 34px;
+    font-weight: 800;
+    color: rgb(216, 216, 216);
+    text-align: center;
+}
+
+.stock_container .stock_element input{
+    height: 50px;
+    width: 140px;
+    background-color: rgb(62, 57, 68);
+    border-radius: 12px;
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.stock_container .stock_element input::placeholder {
+    font-weight: 800;
+    opacity: .7;
+    color: white;
+    font-size: 35px;
+}
+
+.dep_tran_menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.637);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.dep_tran_menu .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 360px;
+    background-image: linear-gradient(135deg, rgb(68, 64, 73), rgb(56, 50, 63));
+    border: solid 3px rgb(90, 85, 97);
+    border-radius: 18px;
+}
+
+.dep_tran_menu .container .back{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 35px;
+    z-index: 10;
+}
+
+.dep_tran_menu .container h1{
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.dep_tran_menu input{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 65px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius:10px;
+    background-color: rgb(51, 47, 56);
+    font-size: 28px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.dep_tran_menu .balance_long_btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 60px;
+}
+
+.sell_shop_menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.637);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.sell_shop_menu .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 360px;
+    background-image: linear-gradient(135deg, rgb(68, 64, 73), rgb(56, 50, 63));
+    border: solid 3px rgb(90, 85, 97);
+    border-radius: 18px;
+}
+
+.sell_shop_menu .container .back{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 35px;
+    z-index: 10;
+}
+
+.sell_shop_menu .container h1{
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.sell_shop_menu .container h2{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 56px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.sell_shop_menu .balance_long_btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 60px;
+    font-size: 35px;
+    background-image: linear-gradient(-135deg, #FF6969, #aa4545);
+}
+
+.jobs_menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.637);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.jobs_menu .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 360px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    border-radius: 18px;
+}
+
+.jobs_menu .container .back{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 35px;
+    z-index: 10;
+}
+
+.jobs_menu .container h1{
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.jobs_menu .container .jobs_container{
+    position: absolute;
+    bottom: 15px;
+    left: 2.5%;
+    height: 200px;
+    width: 95%;
+    overflow: auto;
+}
+
+.jobs_menu .container .jobs_container .job_element{
+    height: 60px;
+    width: 100%;
+    margin-bottom: 6px;
+    border-radius: 13px;
+    background-color: #0000005e;
+    border: solid 2px rgb(83, 78, 90);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.322);
+}
+
+.jobs_menu .container .jobs_container .job_element .value{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.jobs_menu .container .jobs_container .job_element .accept{
+    color: white;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight: 800;
+    background-color: transparent;
+    float: inline-end;
+    margin-right: 5px;
+    background-image: linear-gradient(#03C988, #148660);
+}
+
+.jobs_menu .container .title{
+    position: absolute;
+    top: 65px;
+    left: 2.5%;
+    height: 50px;
+    width: 95%;
+    border-radius: 13px;
+    background-color: #00000079;
+}
+
+.jobs_menu .container .title h2{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.buy_shop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.637);
+    transition: 0.4s;
+    display: none;
+    opacity: 0;
+    z-index: 5;
+}
+
+.buy_shop .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 250px;
+    width: 360px;
+    background-image: linear-gradient(135deg, var(--maincolor), var(--darkercolor));
+    border: solid 3px var(--maincolor);
+    border-radius: 18px;
+}
+
+.buy_shop .container .back{
+    position: relative;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-size: 35px;
+    z-index: 10;
+}
+
+.buy_shop .container h1{
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.buy_shop .container h3{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    font-weight: 800;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+.preview-screen .ui-elements .hud-container > .hud_hexagon {
+    width: 3vw;
+    height: 3vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.preview-screen .ui-elements .hud-container > .hud_hexagon > svg {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    left: 0;
+    top: 0;
+    overflow: visible;
+}
+
+.preview-screen .ui-elements .hud-container > .hud_hexagon .icon {
+    font-size: 0.75vw;
+    position: relative;
+    z-index: 2;
+    color: var(--motive);
+}

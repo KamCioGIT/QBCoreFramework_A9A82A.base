@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ks-styles/ks-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>SasVegas-loadingscreen</title>
+</head>
+<body>
+    <div id="ksRoot">
+        <div id="ksVideoCont"></div>
+        <div id="ksMusicCont"></div>
+        <div id="ksOverlay">      
+            <div id="ksTemp1" style="display: none;"> 
+                <div id="ksT1_Team"></div>
+                <div id="ksT1_Data">
+                    <div class="ksT1_Data_Box">
+                        <div class="ksT1_Data_Box_Head">
+                            <div class="ksT1_Data_Box_Head_Line"></div>
+                            <div class="ksT1_Data_Box_Head_Title" id="ksTemp1_Section1_Title"></div>
+                        </div>
+                        <div class="ksT1_Data_Box_Body">
+                            <div class="ksT1_Data_Box_Body_Text" id="ksTemp1_Section1_Text"></div>
+                        </div>
+                    </div>
+                    <div class="ksT1_Data_Box">
+                        <div class="ksT1_Data_Box_Head">
+                            <div class="ksT1_Data_Box_Head_Line"></div>
+                            <div class="ksT1_Data_Box_Head_Title" id="ksTemp1_Section2_Title"></div>
+                        </div>
+                        <div class="ksT1_Data_Box_Body">
+                            <div class="ksT1_Data_Box_Body_Text" id="ksTemp1_Section2_Text"></div>
+                        </div>
+                    </div>
+                    <div class="ksT1_Data_Box">
+                        <div class="ksT1_Data_Box_Head">
+                            <div class="ksT1_Data_Box_Head_Line"></div>
+                            <div class="ksT1_Data_Box_Head_Title" id="ksTemp1_Section3_Title"></div>
+                        </div>
+                        <div class="ksT1_Data_Box_Body">
+                            <div class="ksT1_Data_Box_Body_Text" id="ksTemp1_Section3_Text"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ksT1_Links">
+                    <div class="ksT1_Links_Link ksT1_Links_C ksDiscord"><div class="ksT1_Links_Discord"></div></div>
+                    <div class="ksT1_Links_Link ksT1_Links_C ksWebsite"><div class="ksT1_Links_Website"></div></div>
+                    <div class="ksT1_Links_Link ksT1_Links_C ksSound"><div class="ksT1_Links_SoundOn"></div></div>
+                    <div class="ksT1_Links_Link"><div class="ksT1_Links_Loading"></div></div>
+                </div>
+                <div id="ksT1_Logo"></div>
+            </div>
+            <div id="ksTemp2" style="display: none;">
+                <div id="ksTemp2_Logo"></div>
+                <div id="ksTemp2_Header">
+                    <div id="ksTemp2_Header_G">
+                        <div id="ksTemp2_Header_G_Line"></div>
+                        <div id="ksTemp2_Header_G_Text"></div>
+                    </div>
+                    <div class="ksTemp2_Header_Link ksT1_Links_C ksDiscord"><div class="ksT1_Links_Discord"></div></div>
+                    <div class="ksTemp2_Header_Link ksT1_Links_C ksWebsite"><div class="ksT1_Links_Website"></div></div>
+                    <div class="ksTemp2_Header_Link ksT1_Links_C ksSound"><div class="ksT1_Links_SoundOn"></div></div>
+                    <div class="ksTemp2_Header_Link"><div class="ksT1_Links_Loading"></div></div>
+                </div>
+                <div id="ksTemp2_Team"></div>
+                <div id="ksTemp2_Data">
+                    <div class="ksTemp2_Data_Box">
+                        <div class="ksTemp2_Data_Box_Header">
+                            <div class="ksTemp2_Data_Box_Header_Line"></div>
+                            <div class="ksTemp2_Data_Box_Header_Title" id="ksTemp2_Section1_Title"></div>
+                        </div>
+                        <div class="ksTemp2_Data_Box_Body" id="ksTemp2_Section1_Text"></div>
+                    </div>
+                    <div class="ksTemp2_Data_Box">
+                        <div class="ksTemp2_Data_Box_Header">
+                            <div class="ksTemp2_Data_Box_Header_Line"></div>
+                            <div class="ksTemp2_Data_Box_Header_Title" id="ksTemp2_Section2_Title"></div>
+                        </div>
+                        <div class="ksTemp2_Data_Box_Body" id="ksTemp2_Section2_Text"></div>
+                    </div>
+                    <div class="ksTemp2_Data_Box">
+                        <div class="ksTemp2_Data_Box_Header">
+                            <div class="ksTemp2_Data_Box_Header_Line"></div>
+                            <div class="ksTemp2_Data_Box_Header_Title" id="ksTemp2_Section3_Title"></div>
+                        </div>
+                        <div class="ksTemp2_Data_Box_Body" id="ksTemp2_Section3_Text"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="ksTemp3" style="display: none;">
+                <div id="ksTemp3_Data">
+                    <div id="ksTemp3_Data_P1"></div>
+                    <div id="ksTemp3_Data_P2">
+                        <div id="ksTemp3_Data_P2_Logo"></div>
+                        <div id="ksTemp3_Data_P2_Text"></div>
+                    </div>
+                </div>
+                <div id="ksTemp3_Links">
+                    <div class="ksTemp3_Links_Link">
+                        <div class="ksTemp3_Links_Link_P1"></div>
+                        <div class="ksTemp3_Links_Link_P2">
+                            <div class="ksTemp3_Links_Link_P2_Box">
+                                <div class="ksTemp3_Links_Link_P2_Box_Ic"><div class="ksT1_Links_Discord"></div></div>
+                                <div class="ksTemp3_Links_Link_P2_Box_Text" id="ksCopyDiscordText"></div>
+                                <div class="ksTemp3_Links_Link_P2_Box_Btn" id="ksCopyDiscord"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ksTemp3_Links_Link">
+                        <div class="ksTemp3_Links_Link_P1"></div>
+                        <div class="ksTemp3_Links_Link_P2">
+                            <div class="ksTemp3_Links_Link_P2_Box">
+                                <div class="ksTemp3_Links_Link_P2_Box_Ic"><div class="ksT1_Links_Website"></div></div>
+                                <div class="ksTemp3_Links_Link_P2_Box_Text" id="ksCopyWebsiteText"></div>
+                                <div class="ksTemp3_Links_Link_P2_Box_Btn" id="ksCopyWebsite"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ksTemp3_Team"></div>
+                <div id="ksTemp3_Settings">
+                    <div class="ksTemp3_Settings_Box ksT1_Links_C ksSound"><div class="ksT1_Links_SoundOn"></div></div>
+                    <div class="ksTemp3_Settings_Box"><div class="ksT1_Links_Loading"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../ks-libs-configs/ks-config.js"></script>
+    <script src="./ks-scripts/ks-script.js"></script>
+</body>
+</html>

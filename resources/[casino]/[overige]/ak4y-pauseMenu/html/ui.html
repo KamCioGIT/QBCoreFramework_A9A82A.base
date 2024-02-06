@@ -1,0 +1,229 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="pauseGeneral">
+            <div class="exitSection">
+                <div class="exitBox">
+                    <div class="doYouWantExitText">DO YOU WANT TO EXIT ?</div>
+                    <div class="exitFlexArea">
+                        <div class="exitFlexButton" id="cancelButton">İPTAL</div>
+                        <div class="exitFlexButton" id="exitButton">ONAYLA</div>
+                    </div>
+                </div>
+            </div>
+            <div class="playingGameSection">
+                <div class="playGameArea">
+                    <!-- <iframe class="gamePlay" src="https://fosiper.com/games/hextris-lite/"></iframe> -->
+                    <div class="closeButtonGame">X</div>
+                </div>
+            </div>
+            <div class="topLeftEffect">
+                <img src="./images/topLeft.png" alt="" />
+            </div>
+            <div class="botLeftEffect">
+                <img src="./images/bottomLeft.png" alt="" />
+            </div>
+            <div class="botRightEffect">
+                <img src="./images/bottomRight.png" alt="" />
+            </div>
+            <div class="topRightEffect">
+                <img src="./images/moneyTopRight.png" alt="" />
+            </div>
+            <div class="mainWrapper">
+                <div class="wrapperLeft">
+                    <div class="wrapperItems" id="discordItem">
+                        <div class="wrapperItemImgSection">
+                            <img src="./images/discord.png" alt="" />
+                        </div>
+                        <div class="wrapperText" id="dcText">DISCORD</div>
+                    </div>
+                    <div class="wrapperItems" id="settingsItem">
+                        <div class="wrapperItemImgSection">
+                            <img src="./images/settings.png" alt="" />
+                        </div>
+                        <div class="wrapperText" id="settingsText">AYARLAR</div>
+                    </div>
+                    <div class="wrapperItems" id="resumeItem">
+                        <div class="wrapperItemImgSection" id="resumeImgSection">
+                            <img src="./images/resume.png" alt="" />
+                        </div>
+                        <div class="wrapperText" id="resumeText">DEVAM ET</div>
+                    </div>
+                    <div class="wrapperItems" id="mapItem">
+                        <div class="wrapperItemImgSection">
+                            <img src="./images/map.png" alt="" />
+                        </div>
+                        <div class="wrapperText" id="mapText">HARİTA</div>
+                    </div>
+                    <div class="wrapperItems" id="exitItem">
+                        <div class="wrapperItemImgSection">
+                            <img src="./images/exit.png" alt="" />
+                        </div>
+                        <div class="wrapperText" id="exitText">ÇIK</div>
+                    </div>
+                </div>
+
+                <div class="wrapperMid">
+                    <div class="wrapperTopSection">
+                        <div class="midTopFirstBox">
+                            <div class="midTopImageSection">
+                                <img src="./images/firstBoxImage.png" alt="" />
+                            </div>
+
+                            <div class="midProfileImageSection">
+                                <img class="ppPhoto" src="./images/pp.png" alt="" />
+                            </div>
+
+                            <div class="firstBoxCharNameSection">
+                                <div class="charInfoFirstName">BRENDEN</div>
+                                <div class="charInfoLastName">RANDALL</div>
+                            </div>
+                            <div class="firstBoxGenderSection">
+                                <div class="genderText">GENDER</div>
+                                <div class="genderInfo">Male</div>
+                            </div>
+                        </div>
+                        <div class="midTopSecondBox">
+                            <div class="midSecondImageArea">
+                                <img src="./images/secondBoxImage.png" alt="" />
+                            </div>
+                            <div class="secondBoxJobSection">
+                                <div class="secondJobText">JOB</div>
+                                <div class="secondJobInfo">MECHANIC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrapperMidSection">
+                        <div class="midBoxUpperSection">
+                            <div class="upperMidImageSection">
+                                <img src="./images/cashImage.png" alt="" />
+                            </div>
+                            <div class="middleCashSection">
+                                <div class="cashMoneyText">
+                                    <span class="cashText">CASH</span>
+                                    <span class="moneyText"> MONEY : </span>
+                                </div>
+                                <div class="cashMoneyAmount">
+                                    <span>€</span>
+                                    25.000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="midBoxBottomSection">
+                            <div class="midBottomImageSection">
+                                <img src="./images/bankImage.png" alt="" />
+                            </div>
+                            <div class="bottomBankMoneySection">
+                                <div class="bankMoneyText">
+                                    <span class="bankText">BANK</span>
+                                    <span class="moneyText">MONEY : </span>
+                                </div>
+                                <div class="bankMoneyAmount">
+                                    <span>€</span>
+                                    50.000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrapperBottomSection">
+                        <div class="midBottomFirstBox">
+                            <div class="bottomBoxImageSec">
+                                <img src="./images/youtube.png" alt="" />
+                            </div>
+                            <div class="bottomYoutubeText">
+                                <span class="youText">You</span>
+                                <span class="tubeText">Tube</span>
+                            </div>
+                        </div>
+                        <div class="midBottomSecondBox">
+                            <div class="bottomInstagramImageSec">
+                                <img src="./images/instagram.png" alt="" />
+                            </div>
+                            <div class="bottomInstaText">Instagram</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapperRight">
+                    <div class="rightFirstBox">
+                        <div class="serverOnlineText">
+                            <span id="serverText">ONLINE</span>
+                            <span id="onlineText">SPELERS : </span>
+                            <span id="currentPlayer">0</span>
+                            <span id="maxPlayer">/128</span>
+                        </div>
+                    </div>
+                    <div class="rightSecondBox">
+                        <div class="rightTopSection">
+                            <div class="rightTopTitle">MINI GAMES</div>
+                            <div class="rightTopDesc">Uyum sağlamanın öneminin farkında olmak çok önemlidir. Suçlama, dedi</div>
+                        </div>
+                        <div class="rightGameListArea">
+                            <div class="rightGameItem" id="hextris">
+                                <div class="hextrisText">HEXTRIS</div>
+                                <div class="rightGameImageSection">
+                                    <img src="./images/hextris.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="rightGameItem" id="towerBuilding">
+                                <div class="rightGameImageSection">
+                                    <img src="./images/towerBuilding.png" alt="" />
+                                </div>
+                                <div class="towerBuildingText">TOWER BUILDING</div>
+                            </div>
+
+                            <div class="rightGameItem" id="drillBunny">
+                                <div class="drillBunnyText">DRILL BUNNY</div>
+                                <div class="rightGameImageSection">
+                                    <img src="./images/drillBunny.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="rightGameItem" id="pacman">
+                                <div class="rightGameImageSection">
+                                    <img src="./images/pacman.png" alt="" />
+                                </div>
+                                <div class="pacmanText">PACMAN</div>
+                            </div>
+
+                            <div class="rightGameItem" id="pool">
+                                <div class="poolText">POOL</div>
+                                <div class="rightGameImageSection">
+                                    <img src="./images/pool.png" alt="" />
+                                </div>
+                            </div>
+
+                            <div class="rightGameItem" id="tetris">
+                                <div class="rightGameImageSection">
+                                    <img src="./images/tetris.png" alt="" />
+                                </div>
+                                <div class="tetrisText">TETRIS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/fontawesome.min.js"></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="js/progressbar.js"></script>
+        <script src="js/app.js?v=1"></script>
+    </body>
+</html>

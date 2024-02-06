@@ -1,0 +1,1291 @@
+@font-face {
+    font-family: "Acrom";
+    src: url("../font/Acrom-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TT Norms";
+    src: url("../font/TTNorms-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("../font/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("../font/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url("../font/Rubik-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../font/Inter-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../font/Inter-Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal";
+    src: url("../font/ZabalDEMO-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Zabal Bold";
+    src: url("../font/ZabalDEMO-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../font/Oswald-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Light";
+    src: url("../font/Oswald-Light.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Oswald Bold";
+    src: url("../font/Oswald-Bold.ttf") format("opentype");
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html,
+body {
+    /* z-index: 999; */
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pauseGeneral {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url("/html/images/BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainWrapper {
+    display: flex;
+    /* background-color: rgba(255, 0, 0, 0.087); */
+    height: 85%;
+    margin-top: 5%;
+}
+
+.wrapperLeft {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    width: 12%;
+    background: linear-gradient(212.49deg, rgba(255, 0, 0, 0.38) -8.63%, rgba(255, 0, 0, 0) 33.06%),
+        linear-gradient(328.93deg, rgba(42, 255, 91, 0.15) 9.74%, rgba(42, 255, 91, 0) 49.87%),
+        radial-gradient(119.08% 30.43% at 9.16% 37.11%, rgba(255, 189, 1, 0.09) 0%, rgba(255, 189, 1, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        linear-gradient(131.88deg, rgba(1, 154, 255, 0.24) 0%, rgba(1, 154, 255, 0) 51.61%);
+    background-blend-mode: lighten, lighten, normal, normal;
+    filter: drop-shadow(0px 0px 48px rgba(35, 138, 255, 0.35));
+    border-radius: 0px 50px 50px 0px;
+    border-right: 4px solid #00c2ff;
+    border-top: 4px solid #00c2ff;
+    border-bottom: 4px solid #00c2ff;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapperItems {
+    width: 48%;
+    height: 10%;
+    cursor: pointer;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+}
+
+.wrapperItems:not(:first-child) {
+    margin-top: 25%;
+}
+
+#discordItem {
+    background: linear-gradient(322.83deg, rgba(184, 221, 255, 0.53) -2.49%, rgba(35, 149, 255, 0) 66.82%),
+        linear-gradient(149.62deg, rgba(32, 135, 255, 0.46) -21.96%, rgba(32, 135, 255, 0) 54.14%);
+    box-shadow: 0px 0px 20px rgba(1, 155, 255, 0.24);
+    /* border-radius: 8.42642px; */
+    border: 1px solid #00eaff8c;
+}
+
+#discordItem:hover {
+    background: linear-gradient(322.83deg, rgba(150, 204, 255, 0.43) -2.49%, rgba(18, 139, 252, 0) 66.82%),
+        linear-gradient(149.62deg, rgba(16, 126, 251, 0.36) -21.96%, rgba(15, 127, 255, 0) 54.14%);
+    box-shadow: 0px 0px 16px rgba(1, 153, 255, 0.6);
+}
+
+#settingsItem {
+    background: linear-gradient(338.56deg, rgba(255, 233, 35, 0.28) 19.32%, rgba(255, 233, 35, 0) 86.16%),
+        linear-gradient(145.46deg, rgba(255, 152, 32, 0.34) -20.7%, rgba(255, 152, 32, 0) 69%);
+    box-shadow: 0px 0px 18px rgba(255, 195, 1, 0.3);
+    /* border-radius: 9.54717px; */
+    border: 1px solid #ff7b009a;
+}
+
+#settingsItem:hover {
+    background: linear-gradient(338.56deg, rgba(255, 233, 35, 0.38) 19.32%, rgba(255, 233, 35, 0) 86.16%),
+        linear-gradient(145.46deg, rgba(255, 152, 32, 0.34) -20.7%, rgba(255, 152, 32, 0) 69%);
+    box-shadow: 0px 0px 18px rgba(255, 195, 1, 0.58);
+}
+
+#resumeItem {
+    width: 54%;
+    height: 12%;
+    /* width: 43%; */
+    /* height: 13%; */
+    background: linear-gradient(334.33deg, rgba(35, 110, 255, 0.16) 20.41%, rgba(35, 110, 255, 0) 56.56%),
+        linear-gradient(149.62deg, #20ffd7 -21.96%, rgba(32, 255, 215, 0.54) -21.95%, rgba(32, 255, 215, 0) 54.14%, rgba(32, 255, 215, 0) 54.14%);
+    /* border-radius: 11px; */
+    border: 1px solid #0044ffa5;
+}
+
+#resumeItem:hover {
+    background: linear-gradient(334.33deg, rgba(35, 110, 255, 0.26) 20.41%, rgba(35, 110, 255, 0) 56.56%),
+        linear-gradient(149.62deg, #20ffd7 -21.96%, rgba(32, 255, 215, 0.64) -21.95%, rgba(32, 255, 215, 0) 54.14%, rgba(32, 255, 215, 0) 54.14%);
+    box-shadow: 0px 1px 21px rgba(1, 75, 255, 0.4);
+}
+
+#mapItem {
+    background: linear-gradient(329.54deg, rgba(0, 255, 133, 0.38) -0.98%, rgba(0, 255, 133, 0) 64.6%),
+        linear-gradient(144.79deg, rgba(130, 255, 32, 0.51) -20.5%, rgba(130, 255, 32, 0) 67.96%);
+    box-shadow: 0px 0px 13px rgba(44, 255, 9, 0.31);
+    /* border-radius: 9.53333px; */
+    border: 1px solid #2bff0094;
+}
+
+#exitItem {
+    background: linear-gradient(322.87deg, rgba(255, 0, 0, 0.4) -2.32%, rgba(255, 0, 0, 0) 68.77%),
+        linear-gradient(144.51deg, rgba(255, 87, 87, 0.61) -20.42%, rgba(255, 87, 87, 0) 87.06%);
+    /* border-radius: 8.43333px; */
+    border: 1px solid #d73e3e9e;
+}
+
+#mapItem:hover {
+    background: linear-gradient(329.54deg, rgba(0, 255, 133, 0.48) -0.98%, rgba(0, 255, 133, 0) 64.6%),
+        linear-gradient(144.79deg, rgba(130, 255, 32, 0.61) -20.5%, rgba(130, 255, 32, 0) 67.96%);
+    box-shadow: 0px 0px 13px rgba(44, 255, 9, 0.44);
+}
+
+#exitItem:hover {
+    background: linear-gradient(322.87deg, rgba(255, 0, 0, 0.5) -2.32%, rgba(255, 0, 0, 0) 68.77%),
+        linear-gradient(144.51deg, rgba(255, 87, 87, 0.71) -20.42%, rgba(255, 87, 87, 0) 87.06%);
+    box-shadow: 0px 0px 15px rgba(255, 6, 6, 0.37);
+}
+
+.wrapperItemImgSection {
+    /* background-color: red; */
+    height: 55%;
+    margin-left: 15%;
+    margin-top: 10%;
+    width: 70%;
+}
+
+#resumeImgSection {
+    height: 60%;
+    margin-left: 10%;
+    margin-top: 11%;
+    width: 80%;
+}
+
+.wrapperItemImgSection img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    /* filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 1)); */
+}
+
+.wrapperText {
+    text-align: center;
+    font-family: Oswald;
+    text-transform: uppercase;
+    font-size: 100%;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.wrapperMid {
+    /* overflow: hidden; */
+    width: 57%;
+    /* background-color: rgba(255, 0, 0, 0.082); */
+    margin-left: 5%;
+}
+
+.wrapperTopSection {
+    display: flex;
+    /* background-color: green; */
+    height: 44%;
+}
+
+.wrapperMidSection {
+    /* background-color: pink; */
+    background: linear-gradient(99.9deg, rgba(151, 107, 55, 0.42) 0%, rgba(151, 107, 55, 0) 39.59%),
+        linear-gradient(261.69deg, rgba(180, 255, 19, 0.26) 0%, rgba(121, 151, 108, 0) 100%);
+    filter: drop-shadow(-5px 0px 23px rgba(165, 255, 128, 0));
+    border-radius: 10px;
+    border: 4px solid #7b9a6d;
+    height: 44%;
+    margin-top: 1%;
+}
+
+.wrapperBottomSection {
+    display: flex;
+    /* background-color: blue; */
+    height: 9.5%;
+    margin-top: 1%;
+}
+
+.midTopFirstBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(228.55deg, rgba(217, 217, 217, 0) -0.12%, rgba(255, 255, 255, 0.4) -0.11%, rgba(255, 188, 88, 0.44) 100%);
+    filter: drop-shadow(-8px -6px 25px rgba(241, 207, 109, 0.47));
+    border-radius: 15px;
+    border: 4px solid #f8ca48;
+}
+
+.midTopImageSection {
+    /* background-color: red; */
+    height: 65%;
+    width: 100%;
+}
+
+.midTopImageSection img {
+    margin-top: 1%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.midProfileImageSection {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* background-color: red; */
+    /* border: 3px solid rgba(0, 0, 255, 0.675); */
+    height: 27%;
+    width: 20%;
+}
+
+.midProfileImageSection img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.firstBoxCharNameSection {
+    display: flex;
+    /* text-shadow: 0px 0px 17.5234px rgba(255, 255, 255, 0.1); */
+
+    /* background-color: red; */
+    width: 60%;
+    height: 10%;
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    color: white;
+    font-size: 32px;
+    font-family: Zabal Bold;
+}
+
+.charInfoLastName {
+    margin-left: 2%;
+    font-family: Zabal;
+}
+
+.midTopSecondBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 1%;
+    width: 50%;
+
+    background: linear-gradient(155.59deg, rgba(255, 98, 98, 0.38) 9.66%, rgba(217, 217, 217, 0) 84.39%);
+    border: 4px solid #ff7e7e;
+    filter: drop-shadow(0px -2px 27px rgba(255, 126, 126, 0));
+    border-radius: 10px;
+}
+
+.midSecondImageArea {
+    height: 98%;
+    width: 105%;
+}
+
+.midSecondImageArea img {
+    height: 100%;
+    width: 100%;
+}
+
+.secondBoxJobSection {
+    /* background-color: red; */
+    color: white;
+    font-family: Oswald;
+    font-size: 32px;
+    height: 25%;
+    width: 35%;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    /* text-shadow: 0px 0px 17.5234px rgba(255, 255, 255, 0.3); */
+}
+
+.secondJobText {
+    /* font-family: Oswald; */
+    color: #ff9898;
+    text-shadow: 0px 0px 17.5234px rgba(255, 89, 89, 0.4);
+}
+
+.firstBoxGenderSection {
+    height: 20%;
+    width: 50%;
+    left: 35%;
+    top: 23%;
+    position: absolute;
+    font-size: 23px;
+    font-family: Acrom;
+}
+
+.genderText {
+    color: #ffee59;
+    text-shadow: 0px 0px 17.5234px rgba(255, 238, 89, 0.37);
+}
+
+.genderInfo {
+    color: #fff7b1;
+}
+
+.midBottomFirstBox {
+    background: linear-gradient(296.26deg, rgba(255, 255, 255, 0.1) -24.64%, rgba(0, 0, 0, 0) 52.56%),
+        linear-gradient(126.09deg, rgba(255, 0, 0, 0.419) -43.44%, rgba(0, 0, 0, 0) 100.01%), rgba(13, 12, 12, 0.687);
+    border: 4px solid rgba(255, 101, 101, 0.33);
+    box-shadow: 0px 7px 24px rgba(163, 0, 1, 0.51);
+    border-radius: 10px;
+    width: 55%;
+    cursor: pointer;
+    height: 100%;
+    transition-duration: 0.2s;
+}
+
+.midBottomFirstBox:hover {
+    background: linear-gradient(296.26deg, rgba(255, 255, 255, 0.1) -24.64%, rgba(0, 0, 0, 0) 52.56%),
+        linear-gradient(126.09deg, rgba(255, 0, 0, 0.519) -43.44%, rgba(0, 0, 0, 0) 100.01%), rgba(13, 12, 12, 0.787);
+    border: 4px solid rgba(255, 101, 101, 0.33);
+    box-shadow: 0px 7px 24px rgba(163, 0, 1, 0.71);
+}
+
+.midBottomSecondBox {
+    z-index: 9;
+    background: linear-gradient(24.18deg, rgba(252, 180, 87, 0.66) -106.29%, rgba(252, 180, 87, 0) 57.44%),
+        linear-gradient(123.2deg, #5655c8 -12.46%, rgba(160, 23, 127, 0) 41.46%),
+        linear-gradient(239.14deg, rgba(160, 23, 127, 0.48) -1.52%, rgba(160, 23, 127, 0) 68.7%);
+    border: 4px solid rgba(246, 73, 90, 0.56);
+    box-shadow: 0px 6px 14px rgba(166, 55, 88, 0.48);
+    border-radius: 10px;
+    width: 45%;
+    margin-left: 1%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.midBottomSecondBox:hover {
+    background: linear-gradient(24.18deg, rgba(252, 180, 87, 0.86) -106.29%, rgba(252, 180, 87, 0) 57.44%),
+        linear-gradient(123.2deg, #4644c1 -12.46%, rgba(160, 23, 127, 0) 41.46%),
+        linear-gradient(239.14deg, rgba(174, 14, 137, 0.58) -1.52%, rgba(160, 23, 127, 0) 68.7%);
+    box-shadow: 0px 6px 14px rgba(174, 14, 137, 0.68);
+    border: 4px solid rgba(246, 73, 90, 0.66);
+}
+
+.wrapperRight {
+    width: 21%;
+    margin-left: 1%;
+    /* background-color: red; */
+}
+
+.rightFirstBox {
+    height: 10%;
+    background: linear-gradient(54.81deg, rgba(158, 255, 0, 0.26) -28.49%, rgba(0, 255, 178, 0.61) 116.05%);
+    background-blend-mode: lighten;
+    box-shadow: 3px -5px 30px rgba(18, 255, 79, 0.35);
+    border-radius: 10px;
+    border: 4px solid #02ff3a;
+}
+
+.rightSecondBox {
+    overflow: hidden;
+    margin-top: 3%;
+    height: 88.5%;
+    border: 4px solid #6100ff;
+    background: radial-gradient(81.9% 46.56% at 13.1% 17.35%, rgba(123, 41, 255, 0.2) 0%, rgba(251, 41, 255, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        linear-gradient(341.94deg, rgba(97, 0, 255, 0.4) 1.23%, rgba(255, 0, 184, 0) 58.93%), rgba(0, 0, 0, 0.1);
+    background-blend-mode: normal, lighten, normal;
+    box-shadow: 12px 11px 42px rgba(107, 1, 255, 0.29);
+    border-radius: 10px;
+}
+
+.midBoxUpperSection {
+    display: flex;
+    /* background-color: red; */
+    width: 105%;
+    height: 50%;
+    margin-left: -5%;
+}
+
+.upperMidImageSection {
+    position: relative;
+    top: -27%;
+    /* background-color: red; */
+    width: 35%;
+    height: 155%;
+}
+
+.upperMidImageSection img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.middleCashSection {
+    position: relative;
+    /* background-color: red; */
+    width: 100%;
+    height: 50%;
+    top: 25%;
+    font-family: Oswald;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.73);
+}
+
+.moneyText {
+    font-family: Oswald Light;
+    /* font-size: 68px; */
+}
+
+.cashMoneyAmount {
+    margin-top: -1%;
+    color: #a5ff80;
+    font-size: 75px;
+    text-shadow: 0px 0px 19.3805px rgba(123, 154, 110, 0.55);
+}
+
+.midBoxBottomSection {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* background-color: red; */
+    height: 50%;
+    width: 103%;
+}
+
+.midBottomImageSection {
+    position: relative;
+    top: 22%;
+    left: 2.5%;
+    /* background-color: red; */
+    /* margin-top: 500%; */
+    height: 170%;
+    width: 30%;
+}
+
+.midBottomImageSection img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.bottomBankMoneySection {
+    text-align: end;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; */
+    /* background-color: red; */
+    height: 50%;
+    width: 70%;
+    right: 27%;
+    position: absolute;
+    font-family: Oswald;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.73);
+}
+
+.bankMoneyAmount {
+    margin-top: -1%;
+    color: #a5ff80;
+    font-size: 75px;
+    text-shadow: 0px 0px 19.3805px rgba(123, 154, 110, 0.55);
+}
+
+.bankMoneyAmount span {
+    font-family: Oswald;
+    margin-right: -0.5%;
+}
+
+.midBottomFirstBox {
+    display: flex;
+}
+
+.bottomBoxImageSec {
+    /* background-color: blue; */
+    position: relative;
+    top: -18%;
+    left: 10%;
+    height: 150%;
+    width: 27%;
+}
+
+.bottomBoxImageSec img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.bottomYoutubeText {
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    font-family: Oswald;
+    font-size: 40px;
+    text-align: center;
+    line-height: 5rem;
+    color: #ff9595;
+}
+
+.tubeText {
+    color: white;
+    font-family: Oswald Light;
+    margin-left: -1.5%;
+}
+
+.midBottomSecondBox {
+    display: flex;
+}
+
+.bottomInstagramImageSec {
+    /* background-color: red; */
+    height: 175%;
+    width: 37%;
+    position: relative;
+    top: -35%;
+    left: 5%;
+}
+
+.bottomInstagramImageSec img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.bottomInstaText {
+    /* background-color: red; */
+    width: 90%;
+    font-family: Oswald;
+    font-size: 40px;
+    text-align: center;
+    line-height: 5rem;
+    color: #e23976;
+}
+
+.rightFirstBox {
+    display: flex;
+}
+
+.serverOnlineText {
+    /* background-color: red; */
+    /* margin-left: 15%; */
+    width: 100%;
+    line-height: 5rem;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-family: Oswald;
+    text-align: center;
+}
+
+#onlineText {
+    font-family: Oswald Light;
+    margin-right: 6%;
+}
+
+#currentPlayer {
+    font-size: 50px;
+    /* margin-left: 5%; */
+    /* position: relative; */
+    /* left: 10%; */
+    /* margin-top: 51rem; */
+    /* line-height: 1rem; */
+    margin-left: 1%;
+    color: #61ff00;
+    text-shadow: 0px 0px 11px rgba(82, 255, 0, 0.33);
+}
+
+#maxPlayer {
+    position: relative;
+    top: -10%;
+    /* line-height: 1rem; */
+    font-size: 20px;
+    /* line-height: rem; */
+}
+
+.rightTopSection {
+    display: flex;
+    margin-bottom: 3%;
+}
+
+.rightTopTitle {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.21) 0%, #be95ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: Oswald;
+    font-size: 45px;
+    width: 55%;
+    transform: rotate(0.05deg);
+    /* width: 50%; */
+    margin-top: 5%;
+    margin-left: 7%;
+    height: 9%;
+}
+
+.rightTopDesc {
+    margin-top: 2.2rem;
+    /* height: 50%; */
+    width: 32%;
+    margin-left: 1%;
+    font-family: Inter;
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.51);
+    /* background-color: red; */
+}
+
+.rightGameListArea {
+    /* background-color: red; */
+    height: 90%;
+}
+.rightGameItem {
+    cursor: pointer;
+    /* background-color: red; */
+    display: flex;
+    height: 12%;
+    width: 90%;
+    margin-left: 5%;
+    transition-duration: 0.2s;
+}
+
+#towerBuilding:hover {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.212) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+}
+
+.rightGameItem:not(:first-child) {
+    margin-top: 8%;
+}
+
+#towerBuilding {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.112) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #bfeeffb8;
+}
+
+#drillBunny {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.112) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #fc8c8ca8;
+}
+#drillBunny:hover {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.212) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+}
+
+#pool {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.112) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #00ff409f;
+}
+#pool:hover {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.212) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+}
+
+#pacman {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.112) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #eeb600ba;
+}
+
+#pacman:hover {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.212) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+}
+#hextris {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.112) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #f1c40f9e;
+}
+#hextris:hover {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.212) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+}
+
+#tetris {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.112) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: 1px solid #f1c40fb6;
+}
+#tetris:hover {
+    background: radial-gradient(94.78% 92.48% at 51.43% 106.52%, rgba(60, 169, 197, 0.212) 0%, rgba(60, 169, 197, 0) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        rgba(0, 0, 0, 0.25);
+}
+
+.towerBuildingText {
+    background: linear-gradient(89.9deg, #93e9ff -1.06%, #0469ff 101.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: Oswald Bold;
+    font-size: 27px;
+    text-align: center;
+    line-height: 5.5rem;
+    width: 100%;
+}
+
+.hextrisText {
+    background: linear-gradient(89.9deg, #ffcc00 -1.06%, #afe0ff 101.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: Oswald Bold;
+    font-size: 27px;
+    text-align: center;
+    line-height: 5.5rem;
+    width: 100%;
+}
+
+.rightGameImageSection {
+    /* background-color: red; */
+    position: relative;
+    top: -15%;
+    width: 50%;
+    height: 125%;
+}
+
+.rightGameImageSection img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.drillBunnyText {
+    background: linear-gradient(89.9deg, #dd2325 -1.06%, #ffd3c6 101.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: Oswald Bold;
+    font-size: 27px;
+    text-align: center;
+    line-height: 5.5rem;
+    width: 100%;
+}
+
+.pacmanText {
+    background: linear-gradient(89.9deg, #edb500 -1.06%, #58504d 101.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: Oswald Bold;
+    font-size: 27px;
+    text-align: center;
+    line-height: 5.5rem;
+    width: 100%;
+}
+
+.tetrisText {
+    background: linear-gradient(89.9deg, #00ff16 -1.06%, #ffaaaa 101.16%, #fa0405 101.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: Oswald Bold;
+    font-size: 27px;
+    text-align: center;
+    line-height: 5.5rem;
+    width: 100%;
+}
+
+.poolText {
+    background: linear-gradient(89.9deg, #0ce442 -1.06%, #8d655b 101.16%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    font-family: Oswald Bold;
+    font-size: 27px;
+    text-align: center;
+    line-height: 5.5rem;
+    width: 100%;
+}
+
+.playingGameSection {
+    display: none;
+    z-index: 987;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.gamePlay {
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+}
+
+.playGameArea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -35%;
+    margin-top: -20%;
+    background: #000000;
+    box-shadow: 0px 0px 58px rgba(181, 1, 255, 0.33);
+    border-radius: 10px;
+    border: 6px solid rgba(181, 1, 255, 0.33);
+    /* background-color: red; */
+    height: 70%;
+    width: 70%;
+}
+
+.closeButtonGame {
+    cursor: pointer;
+    z-index: 987897;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.55);
+    font-family: Oswald;
+    font-size: 23px;
+    text-align: center;
+    left: 97%;
+    top: 1%;
+    height: 4.5%;
+    width: 2.5%;
+    background: linear-gradient(180deg, #ff6a6a 0%, #ff5454 100%);
+    border: 1px solid #ffb5b5;
+    border-radius: 3px;
+}
+
+.closeButtonGame:hover {
+    background: rgba(255, 0, 0, 0.77);
+    color: rgba(255, 255, 255, 0.735);
+}
+
+.topLeftEffect {
+    position: absolute;
+    left: 10%;
+    /* background-color: red; */
+    height: 17%;
+    width: 17%;
+}
+
+.topLeftEffect img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+}
+
+.botLeftEffect {
+    position: absolute;
+    top: 85%;
+    /* left: 1%; */
+    /* background-color: red; */
+    width: 20%;
+    height: 15%;
+}
+
+.botLeftEffect img {
+    height: 100%;
+    width: 100%;
+}
+
+.botRightEffect {
+    position: absolute;
+    top: 85%;
+    left: 70%;
+    /* background-color: red; */
+    width: 15%;
+    height: 15%;
+}
+
+.botRightEffect img {
+    height: 100%;
+    width: 100%;
+}
+
+.topRightEffect {
+    position: absolute;
+    right: 0;
+    /* background-color: red; */
+    width: 15%;
+    height: 20%;
+}
+
+.topRightEffect img {
+    height: 100%;
+    width: 100%;
+}
+
+.exitSection {
+    display: none;
+    z-index: 987;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.exitBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(329.56deg, rgba(255, 152, 152, 0.2) -26.8%, rgba(255, 152, 152, 0) 49%),
+        linear-gradient(124.16deg, rgba(255, 77, 77, 0.2) 13.66%, rgba(255, 77, 77, 0) 70.21%), rgba(0, 0, 0, 0.92);
+    box-shadow: 0px 0px 48px rgba(255, 30, 30, 0.24);
+    border-radius: 10px;
+    height: 17%;
+    width: 22%;
+    margin-left: -11%;
+    margin-top: -8.5%;
+    border: 3px solid #ff6f6f;
+    /* filter: blur(10px); */
+}
+
+.doYouWantExitText {
+    text-align: center;
+    color: white;
+    font-family: Oswald;
+    font-size: 35px;
+    margin-top: 9%;
+}
+
+.exitFlexArea {
+    display: flex;
+    /* background-color: red; */
+    height: 30%;
+    margin-top: 2%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.exitFlexButton {
+    width: 50%;
+    background: linear-gradient(150.91deg, #666666 -38.06%, rgba(102, 102, 102, 0) 63.66%);
+    border: 2px solid rgba(96, 96, 96, 0.72);
+    text-align: center;
+    font-family: Oswald;
+    line-height: 3.1rem;
+    color: #818181;
+    cursor: pointer;
+}
+
+.exitFlexButton:not(:last-child) {
+    margin-right: 3%;
+}
+
+#exitButton {
+    background: linear-gradient(144.8deg, #ff6161 -136.75%, rgba(255, 97, 97, 0) 68.21%);
+    border: 2px solid rgba(255, 89, 89, 0.17);
+    color: #ff9595;
+}
+
+#exitButton:hover {
+    background: linear-gradient(144.8deg, #e54b4b -136.75%, rgba(255, 97, 97, 0.271) 68.21%);
+}
+
+#cancelButton:hover {
+    background: linear-gradient(150.91deg, #585858 -38.06%, rgba(102, 102, 102, 0.2) 63.66%);
+}
+
+
+@media screen and (max-width: 1680px) and (max-height: 1050px) {
+    .rightGameItem {
+        height: 12%;
+    }
+
+    .towerBuildingText {
+        font-size: 23px;
+        line-height: 5.5rem;
+    }
+
+    .hextrisText {
+        font-size: 23px;
+        line-height: 5.5rem;
+    }
+
+    .drillBunnyText {
+        font-size: 23px;
+        line-height: 5.5rem;
+    }
+
+    .pacmanText {
+        font-size: 23px;
+        line-height: 5.5rem;
+    }
+
+    .tetrisText {
+        font-size: 23px;
+        line-height: 5.5rem;
+    }
+
+    .poolText {
+        font-size: 23px;
+        line-height: 5.5rem;
+    }
+
+    .rightTopTitle {
+        font-size: 40px;
+    }
+    .rightGameItem:not(:first-child) {
+        margin-top: 9%;
+    }
+
+    .serverOnlineText {
+        line-height: 4.8rem;
+        font-size: 32px;
+    }
+
+    #currentPlayer {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 1600px) and (max-height: 900px) {
+    .rightGameItem {
+        height: 12%;
+    }
+
+    .towerBuildingText {
+        font-size: 20px;
+        line-height: 4.8rem;
+    }
+
+    .hextrisText {
+        font-size: 20px;
+        line-height: 4.8rem;
+    }
+
+    .drillBunnyText {
+        font-size: 20px;
+        line-height: 4.8rem;
+    }
+
+    .pacmanText {
+        font-size: 20px;
+        line-height: 4.8rem;
+    }
+
+    .tetrisText {
+        font-size: 20px;
+        line-height: 4.8rem;
+    }
+
+    .poolText {
+        font-size: 20px;
+        line-height: 4.8rem;
+    }
+
+    .rightTopTitle {
+        font-size: 40px;
+    }
+    .rightGameItem:not(:first-child) {
+        margin-top: 8.5%;
+    }
+
+    .serverOnlineText {
+        line-height: 4rem;
+        font-size: 32px;
+    }
+
+    #currentPlayer {
+        font-size: 45px;
+    }
+    .bottomYoutubeText {
+        font-size: 35px;
+        line-height: 4.3rem;
+    }
+    .bottomInstaText {
+        font-size: 35px;
+        line-height: 4.3rem;
+    }
+    .doYouWantExitText {
+        font-size: 33px;
+    }
+}
+
+@media screen and (max-width: 1440px) and (max-height: 900px) {
+    .rightGameItem:not(:first-child) {
+        margin-top: 5.5%;
+    }
+    .doYouWantExitText {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    .rightGameItem {
+        height: 11%;
+    }
+    .towerBuildingText {
+        font-size: 17px;
+        line-height: 3.5rem;
+    }
+
+    .hextrisText {
+        font-size: 17px;
+        line-height: 3.5rem;
+    }
+
+    .drillBunnyText {
+        font-size: 17px;
+        line-height: 3.5rem;
+    }
+
+    .pacmanText {
+        font-size: 17px;
+        line-height: 3.5rem;
+    }
+
+    .tetrisText {
+        font-size: 17px;
+        line-height: 3.5rem;
+    }
+
+    .poolText {
+        font-size: 17px;
+        line-height: 3.5rem;
+    }
+
+    .middleCashSection {
+        font-size: 20px;
+    }
+    .cashMoneyAmount {
+        font-size: 50px;
+    }
+
+    .bankMoneyAmount {
+        font-size: 50px;
+    }
+    .rightTopTitle {
+        font-size: 30px;
+    }
+    .rightGameItem:not(:first-child) {
+        margin-top: 9.5%;
+    }
+
+    .serverOnlineText {
+        line-height: 3.3rem;
+        font-size: 25px;
+    }
+
+    #currentPlayer {
+        font-size: 40px;
+    }
+
+    .rightTopDesc {
+        margin-top: 1rem;
+        font-size: 8px;
+    }
+    .doYouWantExitText {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 1024px) {
+    .rightTopTitle {
+        font-size: 20px;
+    }
+    .serverOnlineText {
+        line-height: 4.6rem;
+        font-size: 25px;
+    }
+
+    #currentPlayer {
+        font-size: 35px;
+    }
+    .doYouWantExitText {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 800px) {
+    .rightTopTitle {
+        font-size: 20px;
+    }
+    .serverOnlineText {
+        line-height: 4rem;
+        font-size: 25px;
+    }
+
+    #currentPlayer {
+        font-size: 35px;
+    }
+    .middleCashSection {
+        font-size: 30px;
+    }
+    .cashMoneyAmount {
+        font-size: 55px;
+    }
+
+    .bankMoneyAmount {
+        font-size: 55px;
+    }
+    .doYouWantExitText {
+        font-size: 15px;
+    }
+}

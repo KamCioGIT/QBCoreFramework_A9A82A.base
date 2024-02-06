@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="70" viewBox="0 0 70 70">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-19" y="-19" width="70" height="70" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_48" data-name="Rectangle 48" width="32" height="32" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="ksIcon_Loading" transform="translate(19 19)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="ksIcon_Loading-2" data-name="ksIcon_Loading" clip-path="url(#clip-path-2)">
+      <path id="Path_26" data-name="Path 26" d="M17.6,25.6a3.2,3.2,0,1,1-2.263.937A3.2,3.2,0,0,1,17.6,25.6ZM7.586,20.8a4,4,0,1,1-2.828,1.172A4,4,0,0,1,7.586,20.8Zm18.525.8a3.2,3.2,0,1,1-2.263.937A3.2,3.2,0,0,1,26.11,21.6Zm3.49-6.69a2.4,2.4,0,1,1-1.7.7A2.4,2.4,0,0,1,29.6,14.91ZM4,9.6a4,4,0,1,1-2.828,1.172A4,4,0,0,1,4,9.6ZM28.458,8.331a1.6,1.6,0,1,1-1.131.469A1.6,1.6,0,0,1,28.458,8.331ZM12.8,0A4.8,4.8,0,1,1,9.406,1.406,4.8,4.8,0,0,1,12.8,0Zm12,4.8a.8.8,0,1,1-.566.234A.8.8,0,0,1,24.8,4.8Z" fill="rgba(255,255,255,0.91)" fill-rule="evenodd"/>
+    </g>
+  </g>
+</svg>

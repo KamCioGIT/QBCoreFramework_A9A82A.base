@@ -1,0 +1,2691 @@
+:root {
+  --color: #ff66ff;
+}
+
+@import url('https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css');
+
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(BebasNeueBold.ttf);
+}
+
+@font-face {
+  font-family: KeepCalm-Medium;
+  src: url(KeepCalm-Medium.ttf);
+}
+
+*{
+	user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+html {
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	display: none;
+	color: #a8a8aa;
+}
+
+h4{
+	text-align:center;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.deliverylocation {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--color);
+  width: 15%;
+  height: 40%;
+  text-align:center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 1%;
+}
+
+.letter {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--color);	
+  width: 98.5%;
+  text-align:center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.iteminventory {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--color);	
+  width: 98.5%;
+  height: 5%;
+  text-align:center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.iteminventory:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.iteminventory div:hover span{
+    color: #ffffff;
+}
+
+.itempackage {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--color);	
+  width: 98.5%;
+  height: 10%;
+  text-align:center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.itempackage:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.itempackage div:hover span{
+    color: #ffffff;
+}
+
+.package {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--color);	
+  width: 98.5%;
+  text-align:center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.itempackagetake {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid var(--color);	
+  width: 98.5%;
+  height: 10%;
+  text-align:center;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.gopostalitemcountchoose {
+	width: 50%;
+	height: 20%;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 99999999;
+}
+
+.gopostalitemcounttext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalitemcountinput {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	border: 2px solid var(--color);
+	color: var(--color);
+	width: 80%;
+	left: 50%;
+	top: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 15px;
+	z-index: 9999999;
+}
+
+.gopostalitemcountinput input{
+	color: #ffffff;
+	font-size: 20px;
+	text-align:center;
+	padding: 5px;
+	font-weight: 100;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+}
+
+.gopostalitemcountinput span::after{
+  content: '';
+  position: absolute;
+  text-align:center;
+  padding: 5px;
+  width: 0%;
+  height: 2px;
+  transition: .5s;
+}
+
+.gopostalitemcountinput input::placeholder { 
+    color: white;
+    text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 5px;
+	font-weight: 100;
+}
+
+.gopostaladditembutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 6px;
+	padding-right: 6px;
+	text-decoration: none;
+	text-align: center;
+	top: 80%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 30%;
+}
+
+.gopostaladditembutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.image-holder img {
+	position: absolute;
+	max-width:70%;
+	max-height:100%;
+	top: 15%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	padding: 1.7%;
+}
+
+.container {
+	color: #ffffff;
+	font-size: 20px;
+}
+
+.dutytextinduty {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 25%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 60px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.dutytextoffduty {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 25%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 60px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.selectmissiontext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 60px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.packagesdeliverytext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 35%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.warehousedeliverytext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 35%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.missionpackagesendinfoheader {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 50px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.missionpackagesendinfomainreward {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 45px;
+	color: var(--color);
+	text-align:center;
+}
+
+.missionpackagesendinfootherreward {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 40%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.missionpackagesendinfomaintime {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 60%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: var(--color);
+	text-align:center;
+}
+
+.missionpackagesendinfoothertime {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 80%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.missionwarehouseendinfoheader {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 50px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.missionwarehouseendinfomainreward {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 45px;
+	color: var(--color);
+	text-align:center;
+}
+
+.missionwarehouseendinfootherreward {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 40%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.missionwarehouseendinfomaintime {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 60%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: var(--color);
+	text-align:center;
+}
+
+.missionwarehouseendinfoothertime {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 80%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalsendlettertext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 20%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 80px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.lettersender {
+	text-align:center;
+	text-decoration: none;
+	font-size: 25px;
+	overflow-x: hidden;
+	overflow-y: scroll;	
+	color: #ffffff;
+}
+
+.itempicture {
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;  
+	float: left;
+}
+
+.inventoryiteminfo {
+  padding-top: 0.5%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%; 
+}
+
+.itemlabel {
+	text-align:center;
+	text-decoration: none;
+	font-size: 25px;
+	color: #ffffff;
+	float: center;
+}
+
+.itemcountmain {
+	text-align:right;
+	text-decoration: none;
+	font-size: 16px;
+	color: #ffffff;
+	float: right;
+}
+
+.itemcount {
+	color: var(--color);
+	font-size: 25px;
+}
+
+.packagesender {
+	text-align:center;
+	text-decoration: none;
+	font-size: 25px;
+	overflow-x: hidden;
+	overflow-y: scroll;	
+	color: #ffffff;
+}
+
+.itemnamesendcount {
+	color: var(--color);
+}
+
+.gopostalpackagesloadheader {
+	padding-top: 10px;
+	font-size: 35px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalpackagesloadinfo {
+	padding-bottom: 10px;
+	font-size: 35px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalmissionprogressheader {
+	padding-top: 10px;
+	font-size: 35px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalmissionprogresstext {
+	padding-bottom: 10px;
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalmissionprogressheaderload {
+	padding-top: 10px;
+	font-size: 35px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalmissionprogresstextload {
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalmissionprogressvalueload {
+	padding-bottom: 10px;
+	font-size: 30px;
+	color: #ffffff;
+	text-align:center;
+}
+
+#missionprogressvaluedataload {
+	color: var(--color);
+}
+
+.gopostalmisisonpackageinfoheader {
+	padding-top: 10px;
+	font-size: 35px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalmisisonpackageinforecipientheader {
+	font-size: 30px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalmisisonpackageinforecipientname {
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalmisisonpackageinfoadressheader {
+	font-size: 30px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalmisisonpackageinfoadressname {
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalmisisonpackageinfoshipmentsheader {
+	font-size: 30px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalmisisonpackageinfoshipmentstext {
+	padding-bottom: 10px;
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalmisisonpackageinfoshipmentstext {
+	padding-bottom: 10px;
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.deliverylocationame {
+	font-size: 35px;
+	white-space: nowrap;
+	text-align:center;
+	color: var(--color);
+	padding-bottom: 5px;
+}
+
+.deliverylocationadress {
+	font-size: 25px;
+	color: #ffffff;
+	white-space: nowrap;
+	text-align:center;
+	padding-bottom: 5px;
+}
+
+.deliverylocationdistance{
+	font-size: 30px;
+	color: var(--color);
+	white-space: nowrap;
+	text-align:center;
+	padding-bottom: 5px;
+}
+
+.deliverylocationdistancedata {
+	color: #ffffff;
+}
+
+.gopostalqueuemain {
+	padding-top: 10px;
+	font-size: 35px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalqueuetext {
+	padding-bottom: 10px;
+	font-size: 35px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.queuecounterdata {
+	color: var(--color);
+}
+
+.queuenumberdata {
+	color: var(--color);
+}
+
+.gopostalfirstnamesendlettermain {
+	width: 25%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 40%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalfirstnamesendlettertext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 28%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalfirstnamesendinput {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	border: 2px solid var(--color);
+	color: var(--color);
+	width: 80%;
+	left: 50%;
+	top: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 15px;
+	z-index: 9999999;
+	font-family: KeepCalm-Medium;	
+}
+
+.gopostalfirstnamesendinput input{
+	color: #ffffff;
+	font-size: 20px;
+	text-align:center;
+	padding: 5px;
+	font-weight: 100;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+	font-family: KeepCalm-Medium;
+}
+
+.gopostalfirstnamesendinput span::after{
+  content: '';
+  position: absolute;
+  text-align:center;
+  padding: 5px;
+  width: 0%;
+  height: 2px;
+  transition: .5s;
+  font-family: KeepCalm-Medium;
+}
+
+.gopostalfirstnamesendinput input::placeholder { 
+    color: white;
+    text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 5px;
+	font-weight: 100;
+    font-family: KeepCalm-Medium;
+}
+
+.gopostallastnamesendlettermain {
+	width: 25%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 40%;
+	left: 80%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostallastnamesendlettertext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 28%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostallastnamesendinput {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	border: 2px solid var(--color);
+	color: var(--color);
+	width: 80%;
+	left: 50%;
+	top: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 15px;
+	z-index: 9999999;
+	font-family: KeepCalm-Medium;	
+}
+
+.gopostallastnamesendinput input{
+	color: #ffffff;
+	font-size: 20px;
+	text-align:center;
+	padding: 5px;
+	font-weight: 100;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+	font-family: KeepCalm-Medium;
+}
+
+.gopostallastnamesendinput span::after{
+  content: '';
+  position: absolute;
+  text-align:center;
+  padding: 5px;
+  width: 0%;
+  height: 2px;
+  transition: .5s;
+  font-family: KeepCalm-Medium;
+}
+
+.gopostallastnamesendinput input::placeholder { 
+    color: white;
+    text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 5px;
+	font-weight: 100;
+    font-family: KeepCalm-Medium;
+}
+
+.gopostaltextsendlettermain {
+	width: 80%;
+	height: 35%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostaltextsendletter {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 15%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 55px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostaltextsendletterinput {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	border: 2px solid var(--color);
+	width: 80%;
+	height: 65%;
+	left: 50%;
+	top: 60%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 15px;
+	z-index: 9999999;
+	font-family: KeepCalm-Medium;	
+}
+
+.gopostaltextsendletterinput textarea {
+	width: 100%;
+	height: 100%;
+	font-weight: 100;
+	border: none;
+	outline: none;
+	background: none;
+	color: #ffffff;
+	font-size: 18px;
+	font-family: KeepCalm-Medium;	
+	resize: none;
+	outline: none;
+}
+
+.gopostalsendletterbutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 94%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 20%;
+}
+
+.gopostalsendletterbutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.gopostalsendpackagebutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 85%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 20%;
+}
+
+.gopostalsendpackagebutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.gopostalreturnpackagebutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 85%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 20%;
+}
+
+.gopostalreturnpackagebutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.gopostaltakepackagebutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 85%;
+	left: 80%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 20%;
+}
+
+.gopostaltakepackagebutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.gopostallettertextmaininfo {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 8%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 65px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalpackagetextmaininfo {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 8%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 65px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalsendpackagemaintext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 6%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 65px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalsendpackagemaintextitems {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 32%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalpackagemaintextitems {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 35%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalsendernameletterinfomain {
+	width: 50%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 23%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalsendernameletterinfotextmain {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalsendernameletterinfotextother {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+	white-space: nowrap;
+}
+
+.gopostalletterinfotextlettermain {
+	width: 80%;
+	height: 55%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 62%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 1%;
+	padding-right: 1%;	
+	overflow-x: hidden;
+	overflow-y: scroll;	
+	color: #ffffff;
+	font-size: 15px;
+	font-family: KeepCalm-Medium;	
+}
+
+.gopostalletterinfodelete {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 90.5%;
+	left: 95.5%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 5%;
+}
+
+.gopostalletterinfodelete:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.gopostallettersmain {
+	width: 40%;
+	height: 80%;
+	margin: 0;
+	position: absolute;
+	top: 58%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 9999999;
+}
+
+.gopostalpackageitemssendmain {
+	width: 80%;
+	height: 40%;
+	border: 2px solid var(--color);	
+	margin: 0;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 9999999;
+}
+
+.gopostalpackageitemsmain {
+	width: 80%;
+	height: 40%;
+	border: 2px solid var(--color);	
+	margin: 0;
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 9999999;
+}
+
+.gopostalsendinventorymain {
+	width: 40%;
+	height: 80%;
+	margin: 0;
+	position: absolute;
+	top: 58%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 9999999;
+}
+
+.gopostalpackagesmain {
+	width: 40%;
+	height: 80%;
+	margin: 0;
+	position: absolute;
+	top: 58%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	z-index: 9999999;
+}
+
+.lettersenderfrom {
+	color: var(--color);
+}
+
+.packagesenderfrom {
+	color: var(--color);
+}
+
+.gopostalsendernamepackageinfomain {
+	width: 50%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 23%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalsendernamepackageinfotextmain {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalsendernamepackageinfotextother {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+	white-space: nowrap;
+}
+
+.gopostalpricepackageinfomain {
+	width: 30%;
+	height: 8%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalpricepackageinfotextmain {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 30%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 30px;
+	color: var(--color);
+	text-align:center;
+}
+
+.gopostalpricepackageinfotextother {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 25px;
+	color: #ffffff;
+	text-align:center;
+	white-space: nowrap;
+}
+
+.quitdutybutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 40%;
+}
+
+.quitdutybutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.enterdutybutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 40%;
+}
+
+.gopostallettersmaintext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 12%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 65px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalpackagesendmaininventorytext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 12%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 65px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalpackagesmaintext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 12%;
+	left: 20%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 65px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalfirstnamesendpackagemain {
+	width: 35%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 20%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalfirstnamesendpackagetext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 28%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalfirstnamesendpackageinput {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	border: 2px solid var(--color);
+	color: var(--color);
+	width: 80%;
+	left: 50%;
+	top: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 15px;
+	z-index: 9999999;
+	font-family: KeepCalm-Medium;	
+}
+
+.gopostalfirstnamesendpackageinput input{
+	color: #ffffff;
+	font-size: 20px;
+	text-align:center;
+	padding: 5px;
+	font-weight: 100;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+	font-family: KeepCalm-Medium;
+}
+
+.gopostalfirstnamesendpackageinput span::after{
+  content: '';
+  position: absolute;
+  text-align:center;
+  padding: 5px;
+  width: 0%;
+  height: 2px;
+  transition: .5s;
+  font-family: KeepCalm-Medium;
+}
+
+.gopostalfirstnamesendpackageinput input::placeholder { 
+    color: white;
+    text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 5px;
+	font-weight: 100;
+    font-family: KeepCalm-Medium;
+}
+
+.gopostallastnamesendpackagemain {
+	width: 35%;
+	height: 15%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 20%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostallastnamesendpackagetext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 28%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 40px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostallastnamesendpackageinput {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	border: 2px solid var(--color);
+	color: var(--color);
+	width: 80%;
+	left: 50%;
+	top: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 15px;
+	z-index: 9999999;
+	font-family: KeepCalm-Medium;	
+}
+
+.gopostallastnamesendpackageinput input{
+	color: #ffffff;
+	font-size: 20px;
+	text-align:center;
+	padding: 5px;
+	font-weight: 100;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+	font-family: KeepCalm-Medium;
+}
+
+.gopostallastnamesendpackageinput span::after{
+  content: '';
+  position: absolute;
+  text-align:center;
+  padding: 5px;
+  width: 0%;
+  height: 2px;
+  transition: .5s;
+  font-family: KeepCalm-Medium;
+}
+
+.gopostallastnamesendpackageinput input::placeholder { 
+    color: white;
+    text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 5px;
+	font-weight: 100;
+    font-family: KeepCalm-Medium;
+}
+
+.gopostalcostsendpackagemain {
+	width: 35%;
+	height: 12%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 85%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalcostsendpackagetext {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 28%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 35px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.gopostalcostsendpackageinput {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	border: 2px solid var(--color);
+	color: var(--color);
+	width: 80%;
+	left: 50%;
+	top: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 15px;
+	z-index: 9999999;
+}
+
+.gopostalcostsendpackageinput input{
+	color: #ffffff;
+	font-size: 20px;
+	text-align:center;
+	padding: 5px;
+	font-weight: 100;
+	border: none;
+	width: 100%;
+	outline: none;
+	background: none;
+}
+
+.gopostalcostsendpackageinput span::after{
+  content: '';
+  position: absolute;
+  text-align:center;
+  padding: 5px;
+  width: 0%;
+  height: 2px;
+  transition: .5s;
+}
+
+.gopostalcostsendpackageinput input::placeholder { 
+    color: white;
+    text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 5px;
+	font-weight: 100;
+}
+
+.enterdutybutton:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.selectpackagesdelivery {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 50%;
+}
+
+.selectpackagesdelivery:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.selectwarehousedelivery {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 70%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 50%;
+}
+
+.selectwarehousedelivery:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.selectendbuttonmissionpackage {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 85%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 30%;
+}
+
+.selectendbuttonmissionpackage:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.selectendbuttonmissionwarehouse {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	font-size: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-decoration: none;
+	text-align: center;
+	top: 85%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 30%;
+}
+
+.selectendbuttonmissionwarehouse:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+.selectsendparcelbutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.25);
+	border: 1px solid #ffffff;
+	border-radius: 15px;
+	color: #ffffff;
+	font-size: 55px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	text-align: center;
+	top: 35%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 90%;
+}
+
+.selectsendparcelbutton:hover {
+	cursor: pointer;
+	background: #000000;
+	text-decoration: none;
+}
+
+.selectsendletterbutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.25);
+	border: 1px solid #ffffff;
+	border-radius: 15px;
+	color: #ffffff;
+	font-size: 55px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 90%;
+}
+
+.selectsendletterbutton:hover {
+	cursor: pointer;
+	background: #000000;
+	text-decoration: none;
+}
+
+.selectwithdrawparcelbutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.25);
+	border: 1px solid #ffffff;
+	border-radius: 15px;
+	color: #ffffff;
+	font-size: 55px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	text-align: center;
+	top: 65%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 90%;
+}
+
+.selectwithdrawparcelbutton:hover {
+	cursor: pointer;
+	background: #000000;
+	text-decoration: none;
+}
+
+.selectwithdrawletterbutton {
+	position: absolute;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.25);
+	border: 1px solid #ffffff;
+	border-radius: 15px;
+	color: #ffffff;
+	font-size: 55px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+	text-align: center;
+	top: 80%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+	width: 90%;
+}
+
+.selectwithdrawletterbutton:hover {
+	cursor: pointer;
+	background: #000000;
+	text-decoration: none;
+}
+
+.selectdeliverylocation {
+	background-color: rgba(0, 0, 0, 1);
+	border-bottom: 2px solid var(--color);
+	color: #ffffff;
+	margin: auto;
+	font-size: 30px;
+	padding-top: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+	text-align:center;
+	width: 50%;
+}
+
+.selectdeliverylocation:hover {
+	cursor: pointer;
+	background: var(--color);
+	text-decoration: none;
+}
+
+::-webkit-scrollbar
+{
+	width: 4px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.full-screen {
+  width: 100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+
+.gopostalduty-containeriWYJtcXenICFZbRdts9tH2bFwTAHNBMpX {
+	width: 60%;
+	height: 60%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmission-container {
+	width: 60%;
+	height: 60%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmissionpackageloadprogress-container {
+	width: 25%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	margin: 0;
+	position: absolute;
+	top: 92%;
+	left: 85%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmissionprogresstext-container {
+	width: 25%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	margin: 0;
+	position: absolute;
+	top: 92%;
+	left: 85%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmissionprogressloading-container {
+	width: 25%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	margin: 0;
+	position: absolute;
+	top: 92%;
+	left: 85%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmisisonpackageinfo-container {
+	width: 25%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	margin: 0;
+	position: absolute;
+	top: 85%;
+	left: 85%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmissionpackageend-container {
+	width: 50%;
+	height: 60%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmissionwarehouseend-container {
+	width: 50%;
+	height: 60%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalmissiondeliverylocations-container {
+	width: 80%;
+	height: 70%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalchooseservice-container {
+	width: 20%;
+	height: 60%;
+	background: url("img/backgroundservices.png");
+	background-size: 500px 1000px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalservicesendletter-container {
+	width: 60%;
+	height: 80%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalserviceletters-container {
+	width: 60%;
+	height: 80%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalservicesendpackage-container {
+	width: 60%;
+	height: 80%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalservicepackages-container {
+	width: 60%;
+	height: 80%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalqueue-container {
+	width: 25%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border-bottom: 3px solid var(--color);
+	margin: 0;
+	position: absolute;
+	top: 92%;
+	left: 85%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.deliverylocationsmain {
+	width: 100%;
+	height: 70%;
+	margin: 0;
+	position: absolute;
+	top: 68%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalletterinfomain {
+	width: 60%;
+	height: 100%;
+	border-left: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 56.1%;
+	left: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalpackageinfomain {
+	width: 60%;
+	height: 100%;
+	border-left: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 56.1%;
+	left: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.gopostalsendpackagemain {
+	width: 60%;
+	height: 100%;
+	border-left: 3px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 56.1%;
+	left: 70%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.ChooseDeliveryLocation {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 24%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 80px;
+	color: #ffffff;
+	text-align:center;
+}
+
+.induty {
+	width: 60%;
+	height: 60%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.offduty {
+	width: 60%;
+	height: 60%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.packagesdeliveryselect {
+	width: 30%;
+	height: 40%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 65%;
+	left: 25%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.warehousedeliveryselect {
+	width: 30%;
+	height: 40%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 65%;
+	left: 75%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.missionpackagesinfo {
+	width: 60%;
+	height: 40%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.missionwarehouseinfo {
+	width: 60%;
+	height: 40%;
+	background-color: rgba(0, 0, 0, 0.70);
+	border: 2px solid var(--color);
+	border-radius: 1px;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.headerduty {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headermission {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headerpackageend {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headerwarehouseeend {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headerpackagedeliverylocations {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headersendletter {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headerletters {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headersendpackage {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.headerpackages {
+  width:100%;
+  height: 2.5%;
+  color: #ffffff;
+  display: flex;
+  background-color: rgba(0, 0, 0, 1);
+  border-bottom: 3px solid var(--color);  
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:2.5%;
+}
+
+.btnQuit {
+	width:100%;
+}
+
+.closegopostaldutymenu {
+	position: absolute;
+	left: 98%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.5%
+}
+
+.closegopostalmissionmenu {
+	position: absolute;
+	left: 98%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.5%
+}
+
+.closegopostalpackagesend {
+	position: absolute;
+	left: 97.5%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.0%
+}
+
+.closegopostalwarehouseend {
+	position: absolute;
+	left: 97.5%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.0%
+}
+
+.closegopostalservicechoose {
+	position: absolute;
+	left: 95%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.0%
+}
+
+.closegopostalsendletter {
+	position: absolute;
+	left: 98%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.0%
+}
+
+.closegopostalletters {
+	position: absolute;
+	left: 98%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.0%
+}
+
+.closegopostalsendpackage {
+	position: absolute;
+	left: 98%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.0%
+}
+
+.closegopostalpackages {
+	position: absolute;
+	left: 98%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 3.0%
+}
+
+.closecountchoose {
+	position: absolute;
+	left: 96%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	top: 11.0%
+}
+
+.HeaderGoPostalDuty {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.5%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalMission {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.5%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalMissionEndPackages {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.5%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalMissionEndWarehouse {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.5%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalMissionDeliveryPackagesLocations {
+	position: absolute;
+	margin: 0;
+	font-size: 40px;
+	color: #ffffff;
+	text-align: center;
+	top: 4.0%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalSendLetter {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.0%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalLetters {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.0%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalSendPackage {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.0%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.HeaderGoPostalPackages {
+	position: absolute;
+	margin: 0;
+	font-size: 35px;
+	color: #ffffff;
+	text-align: center;
+	top: 3.0%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: 9999999;
+}
+
+.deliverylocations {
+	width: 100%;
+	height: 90%;
+	left: 50%;
+	overflow: auto;
+	display: flex;
+	flex-wrap: wrap;		
+	font-family: BebasNeueBold;
+}
+
+::placeholder {
+	color: #ffffff;	
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+*{
+	font-family: BebasNeueBold;
+}

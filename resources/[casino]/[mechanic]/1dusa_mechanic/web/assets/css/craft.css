@@ -1,0 +1,236 @@
+.craft-inner{
+    width: 100%;
+    height: 100%;
+}
+
+.craft-header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    pointer-events: none;
+}
+
+.craft-header h1{
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(2715.55% 330.87% at 50% 50%, #6CEAC7 0%, rgba(108, 234, 199, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3vw;
+    text-shadow: 0px 3.387px 116.02px rgba(108, 234, 199, 0.55);
+    font-weight: 900;
+}
+
+.craft-header h2{
+    text-align: center;
+    color: #6CEAC7;
+    margin-left: 2.5vw;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    letter-spacing: 2vw;
+}
+
+.craft-header-image{
+    position: absolute;
+}
+
+.craft-header-image img{
+    width: 27vw;
+}
+
+.crafting-body{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3vw;
+    gap: 2vw;
+}
+
+.crafting-body-header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.crafting-body-header h1{
+    color: #fff;
+    font-family: bebas neue;
+    font-weight: 700;
+    font-size: 2.5vw;
+}
+
+.crafting-body-header p{
+    color: rgba(255, 255, 255, 0.68);
+    font-family: bebas neue;
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+
+.crafting-list{
+    width: 19vw;
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    direction: rtl;
+}
+
+.craft-item{
+    width: 17vw;
+    height: 17vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5vw;
+    padding-left: 1vw;
+    background: linear-gradient(126.97deg, rgba(0, 0, 0, 0.61) 28.26%, rgba(4, 5, 9, 0.61) 91.2%);
+    border: 1.28632px solid rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(3.20605px);
+    margin-bottom: 1vw;
+    direction: ltr;
+    transition: 0.2s ease-in-out;
+}
+
+.craft-item-filter{
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    top: 0;
+    left: 0;
+    background: #B8B8B8;
+    filter: blur(80.957px);
+    z-index: -1;
+}
+
+.craft-item.active{
+    background: linear-gradient(126.97deg, rgba(0, 0, 0, 0.61) 28.26%, rgba(0, 0, 0, 0.61) 91.2%);
+    border: 1.28632px solid rgba(108, 234, 199, 0.62);
+    backdrop-filter: blur(3.20605px);
+}
+
+.craft-item#select{
+    background: linear-gradient(126.97deg, rgba(0, 0, 0, 0.61) 28.26%, rgba(0, 0, 0, 0.61) 91.2%);
+    border: 1.28632px solid rgba(255, 255, 255, 0.62);
+    backdrop-filter: blur(3.20605px);
+}
+
+.craft-item.active .craft-item-filter{
+    background: #6CEAC7;
+    filter: blur(80.957px);
+    left: 30%;
+}
+
+.craft-img{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.craft-img img{
+    width: 5vw;
+}
+
+.craft-name{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    font-family: bebas neue;
+    font-weight: 400;
+    font-size: 0.7vw;
+}
+
+.craft-requireds{
+    width: 100%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.craft-required{
+    width: 7vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.required-name{
+    color: rgba(255, 255, 255, 0.80);
+    font-family: bebas neue;
+    font-weight: 400;
+    font-size: 0.9vw;
+}
+
+.required-count{
+    color: #8D8D8D;
+    font-family: bebas neue;
+    font-weight: 400;
+    font-size: 0.9vw;
+}
+
+.craft-required.active .required-count{
+    color: #6CEAA4;
+}
+
+.craft-button{
+    width: 95%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(142, 142, 142, 0.33);
+    color: #8E8E8E;
+    font-family: bebas neue;
+    font-weight: 400;
+    font-size: 0.9vw;
+    pointer-events: none;
+}
+
+.craft-button.active{
+    background: linear-gradient(90deg, #6CEAA4 3.42%, #6CEAE2 108.26%);
+    color: #000;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  .crafting-list {
+    scrollbar-width: none;
+    scrollbar-color: rgb(217, 217, 217, 0.71) rgb(217, 217, 217, 0.71);
+  }
+
+  /* Chrome, Edge, and Safari */
+  .crafting-list::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  .crafting-list::-webkit-scrollbar-track {
+    background: rgb(217, 217, 217, 0.28);
+  }
+
+  .crafting-list::-webkit-scrollbar-thumb {
+    background-color: rgb(217, 217, 217, 0.28);
+    border-radius: 0px;
+    border: 0px none #ffffff;
+  }

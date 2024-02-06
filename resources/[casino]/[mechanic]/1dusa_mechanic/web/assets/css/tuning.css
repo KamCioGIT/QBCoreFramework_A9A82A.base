@@ -1,0 +1,514 @@
+@font-face {
+    font-family: "Joyride";
+    src: url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.eot");
+    src: url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/406b56da0c31245c249b3a3c61560d1a.svg#Joyride W05 STD")format("svg");
+}
+
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+.tuning-tablet{
+    width: 55vw;
+    height: 40vw;
+    padding: 1.5vw;
+    border-radius: 0.49144rem;
+    border: 1.311px solid #3A3A3A;
+    background: rgba(10, 10, 10, 0.96);
+    backdrop-filter: blur(42.00196838378906px);
+}
+
+.tuning-header{
+    width: 100%;
+    height: 15%;
+}
+
+.tuning-header h1{
+    font-family: Joyride;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2vw;
+    color: #72DCF9;
+}
+
+.tuning-header p{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    margin-top: 0.5vw;
+    letter-spacing: 10px;
+    color: rgba(255, 255, 255, 0.21);
+}
+
+.tuning-rooter{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.tuning-rooter-item{
+    width: 10vw;
+    height: 3vw;
+    border-radius: 0.63669rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    background-image: url(../img/tuning/rooterbackground.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.tuning-rooter-item svg{
+    width: 1.5vw;
+    height: 1.5vw;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+}
+
+.tuning-rooter-item-text{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 1vw;
+    color: #ffffff71;
+    transition: 0.2s ease-in-out;
+}
+
+.tuning-rooter-item.active svg{
+    opacity: 1;
+}
+
+.tuning-rooter-item.active .tuning-rooter-item-text{
+    color: #ffffff;
+}
+
+.tuning-body{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.tuning-footer{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apply-settings{
+    width: 10vw;
+    height: 3vw;
+    font-size: 1vw;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    border-radius: 0.39325rem;
+    background: linear-gradient(90deg, #73FFE6 4.71%, #73BCFE 99.86%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cancel-button{
+    width: 10vw;
+    height: 3vw;
+    font-size: 1vw;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    border-radius: 0.39325rem;
+background: #3D3D3D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tuning-mods{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 9vw;
+    gap: 1vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.mods-item{
+    width: 15vw;
+    height: 18vw;
+    border-radius: 1.03881rem;
+    border: 0.538px solid rgba(255, 255, 255, 0.09);
+    opacity: 0.41;
+    background: #101322;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+    transition: 0.2s ease-in-out;
+}
+
+.mods-item:nth-child(1){
+    background-image: url(../img/tuning/eco-background.png);
+}
+
+.mods-item:nth-child(2){
+    background-image: url(../img/tuning/sports-background.png);
+}
+
+.mods-item:nth-child(3){
+    background-image: url(../img/tuning/drift-background.png);
+}
+
+
+.mods-img{
+    width: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mods-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.mods-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+.mods-text p{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 2.2vw;
+}
+
+.mods-text svg{
+    width: 5vw !important;
+}
+
+.mods-item.active{
+    opacity: 1;
+}
+
+.mods-select{
+    width: 8vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.mods-select.one{
+    border-radius: 2.03713rem;
+    border: 1.238px solid rgba(115, 240, 180, 0.40);
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 0px 17.329px 0px rgba(115, 226, 240, 0.34);
+    backdrop-filter: blur(26.405515670776367px);
+    color: #73F0B4 !important;
+}
+
+.mods-select.two{
+    border-radius: 2.03713rem;
+    border: 1.238px solid rgba(115, 226, 240, 0.40);
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 0px 17.329px 0px rgba(115, 226, 240, 0.34);
+    backdrop-filter: blur(26.405515670776367px);
+    color: #73E2F0;
+}
+
+.mods-select.three{
+    border-radius: 2.03713rem;
+    border: 1.238px solid rgba(240, 115, 145, 0.40);
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 0px 17.329px 0px rgba(240, 115, 145, 0.34);
+    backdrop-filter: blur(26.405515670776367px);
+    color: #F07391;
+}
+
+.mods-select p{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 0.8vw;
+}
+
+.tuning-details{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 9vw;
+}
+
+.detail-item{
+    width: 15vw;
+    height: 5vw;
+    padding: 0.5vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+    border-radius: 0.57275rem;
+    border: 1.504px solid rgba(255, 255, 255, 0.09);
+    background: linear-gradient(96deg, rgba(22, 22, 22, 0.28) 44.93%, rgba(47, 47, 47, 0.35) 95.82%);
+    backdrop-filter: blur(45.818603515625px);
+}
+
+.detail-text{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 0.8vw;
+    color: #ffff;
+}
+
+.detail-range{
+    width: 100%;
+}
+
+.detail-range input{
+    width: 100%;
+}
+
+
+.tuning-neon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.tuning-neon input {
+    width: 13vw;
+    height: 2.5vw;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 0.8vw;
+    padding-left: 2vw;
+    color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.62763rem;
+    border: 1.648px solid rgba(255, 255, 255, 0.09);
+    background: linear-gradient(96deg, rgba(22, 22, 22, 0.28) 44.93%, rgba(47, 47, 47, 0.35) 95.82%);
+}
+
+.tuning-neon .clr-field button {
+  width: 1.5vw;
+  height: 1.5vw;
+  left: 0.5vw;
+  right: auto;
+  border-radius: 5px;
+
+}
+
+.tuning-neon .clr-picker{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+}
+
+.select-color{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.select-area{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    gap: 1vw;
+}
+
+.check-box{
+    width: 8vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1vw;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    color: #878787;
+    padding: 0.5vw;
+    border-radius: 0.63013rem;
+    border: 1.654px solid rgba(255, 255, 255, 0.09);
+    background: linear-gradient(96deg, rgba(22, 22, 22, 0.28) 44.93%, rgba(47, 47, 47, 0.35) 95.82%);
+    backdrop-filter: blur(50.41136169433594px);
+}
+
+.check-box-area{
+    background-color: #101322;
+    width: 1vw;
+    height: 1vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-box-area input{
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+}
+
+.rainbow{
+    background: linear-gradient(91deg, #72DCF9 -3%, #AF9CFB 37.25%, #8D72F9 71.17%, #F6BCC3 107.39%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.default{
+    cursor: pointer;
+}
+
+.tuning-headlights{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.tuning-headlights input {
+    width: 13vw;
+    height: 2.5vw;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 0.8vw;
+    padding-left: 2vw;
+    color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.62763rem;
+    border: 1.648px solid rgba(255, 255, 255, 0.09);
+    background: linear-gradient(96deg, rgba(22, 22, 22, 0.28) 44.93%, rgba(47, 47, 47, 0.35) 95.82%);
+}
+
+.tuning-headlights .clr-field button {
+  width: 1.5vw;
+  height: 1.5vw;
+  left: 0.5vw;
+  right: auto;
+  border-radius: 5px;
+
+}
+
+.tuning-headlights .clr-picker{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+}
+
+.left-area{
+    width: 50%;
+    height: 80%;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    border-radius: 0.54194rem;
+    border: 0.867px solid #282828;
+    background: rgba(217, 217, 217, 0.02);
+}
+
+.select-rainbow-default{
+    width: 100%;
+    height: 35%;
+    border-radius: 0.54194rem;
+    border: 0.867px solid #282828;
+    background: rgba(217, 217, 217, 0.02);
+    padding: 0.5vw;
+}
+
+.select-rainbow-default-text{
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-size: 0.8vw;
+    color: #ffff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-rainbow-default-text p:nth-child(1){
+    color: rgba(135, 135, 135, 0.98);
+}
+
+.select-rainbow-default-text p:nth-child(2){
+    background: linear-gradient(91deg, #72DCF9 -3%, #AF9CFB 37.25%, #8D72F9 71.17%, #F6BCC3 107.39%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.select-circle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 2vw;
+    margin-top: 0.5vw;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    border-radius: 1.52938rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(217, 217, 217, 0.05);
+}
+
+.select-circle .circle{
+    transition: 0.5s ease-in-out;
+    width: 1.5vw;
+    height: 1.5vw;
+    background: linear-gradient(90deg, #A9A9A9 0%, #A9A9A9 23.33%, #A9A9A9 47.81%, #A9A9A9 72.81%, #A9A9A9 100%);
+    border-radius: 50%;
+    left: 0;
+    position: relative;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.select-rainbow-default.headlights{
+    width: 15vw;
+    height: 5.2vw;
+}
+
+
+.right-area{
+    width: 50%;
+    height: 80%;
+    padding: 0.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    border-radius: 0.54194rem;
+    border: 0.867px solid #282828;
+    background: rgba(217, 217, 217, 0.02);
+}

@@ -1,0 +1,243 @@
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+
+<body>
+	<div class="full-screen">
+		<div class="gopostalduty-containeriWYJtcXenICFZbRdts9tH2bFwTAHNBMpX" id="gopostalduty">
+			<div class="headerduty">
+				<h1 class="HeaderGoPostalDuty">Duty</h1>
+				<div class="btnQuit"><img class="closegopostaldutymenu" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="induty" id="showinduty">
+				<div class="dutytextinduty">You are in Duty</div>
+				<div class="quitdutybutton">Quit Duty</div>	
+			</div>
+			<div class="offduty" id="showoffduty">
+				<div class="dutytextoffduty">You are Off-Duty</div>
+				<div class="enterdutybutton">Enter Duty</div>	
+			</div>						
+		</div>
+		<div class="gopostalmission-container" id="gopostalmission">
+			<div class="headermission">
+				<h1 class="HeaderGoPostalMission">Mission</h1>
+				<div class="btnQuit"><img class="closegopostalmissionmenu" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="selectmissiontext">Select a mission</div>
+			<div class="packagesdeliveryselect">
+				<div class="packagesdeliverytext">Packages Delivery</div>
+				<div class="selectpackagesdelivery">Select</div>	
+			</div>
+			<div class="warehousedeliveryselect">
+				<div class="warehousedeliverytext">Warehouse Delivery</div>
+				<div class="selectwarehousedelivery">Select</div>	
+			</div>						
+		</div>	
+		<div class="gopostalmissionpackageloadprogress-container" id="packageloadprogress">
+			<div class="gopostalpackagesloadheader">Packages in vehicle</div>
+			<div class="gopostalpackagesloadinfo"><span id="packagesinvehicle">0</span>/<span id="packagesinvehiclemax">0</span></div>				
+		</div>
+		<div class="gopostalmissionprogresstext-container" id="missionprogresstext">
+			<div class="gopostalmissionprogressheader"><span id="missionprogressheaderdata">Text</span></div>
+			<div class="gopostalmissionprogresstext"><span id="missionprogresstextdata">Text</span></div>				
+		</div>		
+		<div class="gopostalmisisonpackageinfo-container" id="missionpackageinfo">
+			<div class="gopostalmisisonpackageinfoheader">Packages Delivery</span></div>
+			<div class="gopostalmisisonpackageinforecipientheader">Recipient</div>
+			<div class="gopostalmisisonpackageinforecipientname"><span id="gopostalmisisonpackageinforecipientnamedata">Name</span></div>	
+			<div class="gopostalmisisonpackageinfoadressheader">Address</div>
+			<div class="gopostalmisisonpackageinfoadressname"><span id="gopostalmisisonpackageinfoadressdata">Name</span></div>	
+			<div class="gopostalmisisonpackageinfoshipmentsheader">Remaining shipments</div>
+			<div class="gopostalmisisonpackageinfoshipmentstext"><span id="gopostalmisisonpackageinfoshipmentsdata">0</span></div>			
+		</div>	
+		<div class="gopostalmissionprogressloading-container" id="missionprogressloading">
+			<div class="gopostalmissionprogressheaderload"><span id="missionprogressheaderdataload">Text</span></div>
+			<div class="gopostalmissionprogresstextload"><span id="missionprogresstextdataload">Text</span></div>		
+			<div class="gopostalmissionprogressvalueload"><span id="missionprogressvaluedataload">0</span> seconds</div>		
+		</div>				
+		<div class="gopostalmissionpackageend-container" id="gopostalpackagemissionend">
+			<div class="headerpackageend">
+				<h1 class="HeaderGoPostalMissionEndPackages">Packages Delivery</h1>
+				<div class="btnQuit"><img class="closegopostalpackagesend" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="missionpackagesendinfoheader">Mission Completed!</div>
+			<div class="missionpackagesinfo">		
+				<div class="missionpackagesendinfomainreward">Reward</div>
+				<div class="missionpackagesendinfootherreward"><span id="gopostalmissionpackagerewarddata">0</span>$</div>
+				<div class="missionpackagesendinfomaintime">Total Time</div>
+				<div class="missionpackagesendinfoothertime"><span id="gopostalmissionpackagetimedata">0</span></div>	
+			</div>
+			<div class="selectendbuttonmissionpackage">Confirm</div>	
+		</div>	
+		<div class="gopostalmissionwarehouseend-container" id="gopostalwarehousemissionend">
+			<div class="headerwarehouseeend">
+				<h1 class="HeaderGoPostalMissionEndWarehouse">Packages Delivery</h1>
+				<div class="btnQuit"><img class="closegopostalwarehouseend" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="missionwarehouseendinfoheader">Mission Completed!</div>
+			<div class="missionwarehouseinfo">		
+				<div class="missionwarehouseendinfomainreward">Reward</div>
+				<div class="missionwarehouseendinfootherreward"><span id="gopostalmissionwarehouserewarddata">0</span>$</div>
+				<div class="missionwarehouseendinfomaintime">Total Time</div>
+				<div class="missionwarehouseendinfoothertime"><span id="gopostalmissionwarehousetimedata">0</span></div>	
+			</div>
+			<div class="selectendbuttonmissionwarehouse">Confirm</div>	
+		</div>
+		<div class="gopostalmissiondeliverylocations-container" id="gopostaldeliverymissionlocations">
+			<div class="headerpackagedeliverylocations">
+				<h1 class="HeaderGoPostalMissionDeliveryPackagesLocations">Packages Delivery</h1>
+			</div>
+			<div class="ChooseDeliveryLocation">Choose your delivery location</div>		
+			<div class="deliverylocationsmain">
+				<div class="body deliverylocations">
+					<div class="deliverylocation">
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="gopostalchooseservice-container" id="gopostalcservicechoose">
+			<div class="btnQuit"><img class="closegopostalservicechoose" src="img/close.png" alt="Quit"/></div>	
+			<div class="image-holder">
+				<img id="imageservices" src="img/serviceslogo.png" alt="Logo">
+			</div>	
+			<div class="selectsendparcelbutton">Send a parcel</div>	
+			<div class="selectsendletterbutton">Send a letter</div>	
+			<div class="selectwithdrawparcelbutton">Withdraw parcel</div>	
+			<div class="selectwithdrawletterbutton">Withdraw letter</div>	
+		</div>	
+		<div class="gopostalservicesendletter-container" id="gopostalservicesendletter">
+			<div class="headersendletter">
+				<h1 class="HeaderGoPostalSendLetter">Go-Postal</h1>
+				<div class="btnQuit"><img class="closegopostalsendletter" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="gopostalsendlettertext">Send Letter</div>			
+			<div class="gopostalfirstnamesendlettermain">
+				<div class="gopostalfirstnamesendlettertext">Firstname</div>	
+				<div class="gopostalfirstnamesendinput">
+					<input id="gopostalfirstnamesendletter" placeholder="Firstname" type="text">
+				</div>	
+			</div>	
+			<div class="gopostallastnamesendlettermain">
+				<div class="gopostallastnamesendlettertext">Lastname</div>	
+				<div class="gopostallastnamesendinput">
+					<input id="gopostallastnamesendletter" placeholder="Lastname" type="text">
+				</div>	
+			</div>	
+			<div class="gopostaltextsendlettermain">
+				<div class="gopostaltextsendletter">Letter Text</div>	
+				<div class="gopostaltextsendletterinput">
+					<textarea id="gopostalsendlettertextdata" placeholder="Some text here" rows="4" cols="50"></textarea>
+				</div>		
+			</div>	
+			<div class="gopostalsendletterbutton">Send</div>
+		</div>		
+		<div class="gopostalserviceletters-container" id="gopostalserviceletters">
+			<div class="headerletters">
+				<h1 class="HeaderGoPostalLetters">Go-Postal</h1>
+				<div class="btnQuit"><img class="closegopostalletters" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="gopostallettersmaintext">Letters</div>	
+			<div class="gopostallettersmain">
+				<div class="body letters">		
+				</div>							
+			</div> 			
+			<div class="gopostalletterinfomain">
+				<div class="gopostalletterinfomaindata" id="letterinfoshow">
+					<div class="gopostallettertextmaininfo">Letter</div>	
+					<div class="gopostalsendernameletterinfomain">
+						<div class="gopostalsendernameletterinfotextmain">Sender</div>	
+						<div class="gopostalsendernameletterinfotextother">Name</div>	
+					</div>		
+					<div class="gopostalletterinfotextlettermain"></div>
+					<div class="gopostalletterinfodelete"><i class="fas fa-trash"></i></div>
+				</div>
+			</div>
+		</div>	
+		<div class="gopostalservicesendpackage-container" id="gopostalservicesendpackage">
+			<div class="headersendpackage">
+				<h1 class="HeaderGoPostalSendPackage">Go-Postal</h1>
+				<div class="btnQuit"><img class="closegopostalsendpackage" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="gopostalpackagesendmaininventorytext">Inventory</div>	
+			<div class="gopostalsendinventorymain">
+				<div class="body inventorypackagessend">		
+				</div>							
+			</div> 	
+			<div class="gopostalitemcountchoose" id="itemcountshow">
+				<div class="gopostalitemcounttext">How much <span class="itemnamesendcount">Item Name</span> you want send?</div>	
+				<div class="btnQuit"><img class="closecountchoose" src="img/close.png" alt="Quit"/></div>
+				<div class="gopostalitemcountinput">
+					<input id="gopostalitemcountdata" min="1" placeholder="value" type="number">
+				</div>	
+				<div class="gopostaladditembutton">Add</div>
+			</div>				
+			<div class="gopostalsendpackagemain">
+				<div class="gopostalsendpackagemaintext">Send Package</div>	
+				<div class="gopostalfirstnamesendpackagemain">
+					<div class="gopostalfirstnamesendpackagetext">Firstname</div>	
+					<div class="gopostalfirstnamesendpackageinput">
+						<input id="gopostalfirstnamesendpackage" placeholder="Firstname" type="text">
+					</div>	
+				</div>	
+				<div class="gopostallastnamesendpackagemain">
+					<div class="gopostallastnamesendpackagetext">Lastname</div>	
+					<div class="gopostallastnamesendpackageinput">
+						<input id="gopostallastnamesendpackage" placeholder="Lastname" type="text">
+					</div>	
+				</div>	
+				<div class="gopostalsendpackagemaintextitems">Items</div>	
+				<div class="gopostalpackageitemssendmain">
+					<div class="body packageitemssend">		
+					</div>							
+				</div> 	
+				<div class="gopostalcostsendpackagemain">
+					<div class="gopostalcostsendpackagetext">Cost</div>	
+					<div class="gopostalcostsendpackageinput">
+						<input id="gopostalcostsendpackage" placeholder="price" type="number">
+					</div>	
+				</div>		
+				<div class="gopostalsendpackagebutton">Send</div>
+			</div>
+		</div>	
+		<div class="gopostalservicepackages-container" id="gopostalservicepackages">
+			<div class="headerpackages">
+				<h1 class="HeaderGoPostalPackages">Go-Postal</h1>
+				<div class="btnQuit"><img class="closegopostalpackages" src="img/close.png" alt="Quit"/></div>
+			</div>
+			<div class="gopostalpackagesmaintext">Packages</div>	
+			<div class="gopostalpackagesmain">
+				<div class="body packages">		
+				</div>							
+			</div> 
+			<div class="gopostalpackageinfomain">
+				<div class="gopostalpackageinfomaindata" id="packageinfoshow">
+					<div class="gopostalpackagetextmaininfo">Package</div>	
+					<div class="gopostalsendernamepackageinfomain">
+						<div class="gopostalsendernamepackageinfotextmain">Sender</div>	
+						<div class="gopostalsendernamepackageinfotextother">Name</div>	
+					</div>
+					<div class="gopostalpackagemaintextitems">Items</div>	
+					<div class="gopostalpackageitemsmain">
+						<div class="body packageitems">		
+						</div>							
+					</div>
+					<div class="gopostalreturnpackagebutton">Return</div>
+					<div class="gopostaltakepackagebutton">Take</div>
+					<div class="gopostalpricepackageinfomain">
+						<div class="gopostalpricepackageinfotextmain">Price</div>	
+						<div class="gopostalpricepackageinfotextother">$<span class="packageprice">0</span></div>	
+					</div>					
+				</div>
+			</div>		
+		</div>	
+		<div class="gopostalqueue-container" id="queueshow">
+			<div class="gopostalqueuemain">Queue</div>
+			<div class="gopostalqueuetext">Counter: <span class="queuecounterdata">0</span> Number: <span class="queuenumberdata">0</span></div>				
+		</div>		
+	</div>
+
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="scripts.js" type="text/javascript"></script>
+	<script src="debounce.min.js" type="text/javascript"></script>
+</body>

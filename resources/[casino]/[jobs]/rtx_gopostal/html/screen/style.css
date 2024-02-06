@@ -1,0 +1,80 @@
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(BebasNeueBold.ttf);
+}
+
+
+body {
+	background-size: 400% 400%;
+}
+
+.background-color {
+  background-image: url("img/background.png");
+  position: absolute;
+  top: 0;left: 0;right: 0;bottom: 0;
+  display: block;
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.counter1number {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 40%;
+	left: 41%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 150px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+.counter1data {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 40%;
+	left: 11%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 150px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+.counter2number {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 75%;
+	left: 41%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 150px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}
+
+.counter2data {
+	position: absolute;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+	top: 75%;
+	left: 11%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);	
+	font-size: 150px;
+	color: #ffffff;
+	text-align:center;
+	font-family: BebasNeueBold;
+}

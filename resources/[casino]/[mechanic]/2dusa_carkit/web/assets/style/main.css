@@ -1,0 +1,196 @@
+*{
+    user-select: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* body{
+    background-color: rgb(0, 0, 0, 0.5);
+} */
+
+/* Lastik Sökme*/
+
+.tyre-cont{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: none;
+    align-items: flex-end;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.car-1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.tyre{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 60vh;
+}
+
+.vida-1{
+    position: absolute;
+    width: 1.5vw;
+    height: 1.5vw;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#tyre-1{
+    position: absolute;
+    width: 29vw;
+    pointer-events: none;
+    top: 65px;
+    left: 13.7%;
+}
+
+.vida-1:nth-child(1){
+    top: 45%;
+    left: 26%;
+}
+
+.vida-1:nth-child(2){
+    top: 45%;
+    left: 29%;
+}
+
+.vida-1:nth-child(3){
+    top: 53%;
+    left: 30.5%;
+}
+
+.vida-1:nth-child(4){
+    top: 53%;
+    left: 24.3%;
+}
+
+.vida-1:nth-child(5){
+    top: 60%;
+    left: 25.7%;
+}
+
+.vida-1:nth-child(6){
+    top: 60%;
+    left: 28.6%;
+}
+
+/* Lastik Takma */
+
+.new-tyre-cont{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: none;
+    align-items: flex-end;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.new-tyre{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 60vh;
+}
+
+.vida-2{
+    position: absolute;
+    width: 1.5vw;
+    height: 1.5vw;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#tyre-2{
+    position: absolute;
+    width: 29vw;
+    pointer-events: none;
+    top: 65px;
+    left: 13.7%;
+}
+
+.vida-2:nth-child(1){
+    top: 45%;
+    left: 26%;
+}
+
+.vida-2:nth-child(2){
+    top: 45%;
+    left: 29%;
+}
+
+.vida-2:nth-child(3){
+    top: 53%;
+    left: 30.5%;
+}
+
+.vida-2:nth-child(4){
+    top: 53%;
+    left: 24.3%;
+}
+
+.vida-2:nth-child(5){
+    top: 60%;
+    left: 25.7%;
+}
+
+.vida-2:nth-child(6){
+    top: 60%;
+    left: 28.6%;
+}
+
+
+/* Temizlik */
+
+.clean-cont{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    object-fit: cover;
+    cursor: none;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.car-2{
+    width: 100vw;
+    position: absolute;
+}
+
+.clear-dirt{
+    position: relative;
+    top: 2%;
+    width: 92vw;
+    height: 55vh;
+    z-index: 1;
+}
+
+.clear-dirt img{
+    width: 100%;
+    height: 100%;
+}
+
+.cursor-bez{
+    position: absolute;
+    width: 10.5vw;
+    height: 10.5vw;
+    z-index: 2;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.cursor-bez img{
+    width: 100%;
+    height: 100%;
+}

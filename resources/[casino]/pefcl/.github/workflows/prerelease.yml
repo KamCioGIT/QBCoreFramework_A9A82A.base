@@ -1,0 +1,69 @@
+name: Prerelease Publisher
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  pre-release-build:
+    name: 'Build & Create Pre-Release'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+
+      - name: Setup Node and Yarn Cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: 'yarn'
+
+      - name: Get variables
+        id: get_vars
+        run: |
+          echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+          echo "::set-output name=SHORT_SHA::$(git rev-parse --short HEAD)"
+          echo "::set-output name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
+
+      - name: Install main deps
+        run: yarn --frozen-lockfile
+
+      - name: Translations
+        env:
+          LOCALAZY_READ_KEY: ${{ secrets.LOCALAZY_READ_KEY }}
+          LOCALAZY_WRITE_KEY: ${{ secrets.LOCALAZY_WRITE_KEY }}
+        run: |
+          yarn translations:pull
+          yarn translations:generate-index
+
+      - name: Install src deps
+        working-directory: src
+        run: yarn --frozen-lockfile
+
+      - name: Install web deps
+        working-directory: web
+        run: yarn --frozen-lockfile
+
+      - name: Create pre-release
+        run: |
+          chmod +x "./scripts/prerelease.sh"
+          yarn pre-release
+
+      - name: Create Release & Changelog
+        uses: 'marvinpinto/action-automatic-releases@v1.2.1'
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          title: Pre-Release Build (${{ steps.get_vars.outputs.SHORT_SHA }})
+          prerelease: true
+          automatic_release_tag: unstable-${{ steps.get_vars.outputs.BRANCH_NAME }}
+          files: ./temp/pefcl-pre-${{ steps.get_vars.outputs.SHORT_SHA }}.zip
+
+        env:
+          CI: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
